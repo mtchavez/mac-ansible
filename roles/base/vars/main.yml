@@ -2,6 +2,8 @@
 
 brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
 brew_bin: "/usr/local/bin/brew"
+brew_cask_install: "brew install caskroom/cask/brew-cask"
+brew_cask_bin: "/usr/local/bin/brew-cask"
 brew_base_packages:
   - name: autoconf
   - name: automake
@@ -48,13 +50,8 @@ brew_base_packages:
   - name: postgresql
   - name: python
   - name: python3
-  - name: rbenv
-  - name: rbenv-bundler
-  - name: rbenv-default-gems
-  - name: rbenv-gem-rehash
   - name: readline
   - name: redis
-  - name: ruby-build
   - name: s3cmd
   - name: snappy
   - name: sqlite
@@ -63,8 +60,6 @@ brew_base_packages:
   - name: zeromq
 brew_cask_applications:
   - name: alfred
-  - name: anvil
-    state: absent
   - name: appzapper
   - name: arduino
   - name: atom
