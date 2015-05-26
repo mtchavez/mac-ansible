@@ -37,3 +37,17 @@
   tags:
     - base
     - brew
+
+- name: ssh dir
+  file:
+    path={{ home_dir }}/.ssh
+    state=directory
+  tags:
+    - base
+
+- name: Project workspace
+  file:
+    path={{ workspace_dir }}
+    state=directory
+  tags:
+    - base
