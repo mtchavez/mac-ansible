@@ -1,0 +1,93 @@
+---
+
+brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+brew_bin: "/usr/local/bin/brew"
+brew_base_packages:
+  - name: autoconf
+  - name: automake
+  - name: bash
+  - name: bash-completion
+  - name: bazaar
+  - name: cmake
+  - name: coreutils
+  - name: cscope
+  - name: ctags
+  - name: curl
+  - name: findutils
+  - name: fontconfig
+  - name: freetype
+  - name: fswatch
+  - name: gettext
+  - name: git
+    install_options: "with-gettext,with-pcre"
+  - name: gnu-sed
+  - name: gnu-tar
+  - name: graphviz
+  - name: hub
+  - name: influxdb
+  - name: jq
+  - name: leveldb
+  - name: libevent
+  - name: libffi
+  - name: libidn
+  - name: libmemcached
+  - name: libmpc
+  - name: libpng
+  - name: libxml2
+  - name: libyaml
+  - name: lua
+  - name: luajit
+  - name: macvim
+    install_options: "custom-icons,override-system-vim,with-lua,with-luajit,with-python3"
+  - name: makedepend
+  - name: memcached
+  - name: mercurial
+  - name: moreutils
+  - name: phantomjs
+  - name: pkg-config
+  - name: postgresql
+  - name: python
+  - name: python3
+  - name: rbenv
+  - name: rbenv-bundler
+  - name: rbenv-default-gems
+  - name: rbenv-gem-rehash
+  - name: readline
+  - name: redis
+  - name: ruby-build
+  - name: s3cmd
+  - name: snappy
+  - name: sqlite
+  - name: the_silver_searcher
+  - name: wget
+  - name: zeromq
+brew_cask_applications:
+  - name: alfred
+  - name: anvil
+    state: absent
+  - name: appzapper
+  - name: arduino
+  - name: atom
+  - name: bartender
+  - name: caffeine
+  - name: dropbox
+  - name: firefox
+  - name: flux
+  - name: google-chrome
+  - name: google-hangouts
+  - name: gpgtools
+  - name: heroku-toolbelt
+  - name: imagealpha
+  - name: imageoptim
+  - name: istat-menus
+  - name: iterm2
+  - name: julia
+  - name: keyboard-cleaner
+  - name: spotify
+  - name: sublime-text
+  - name: the-unarchiver
+  - name: transmission
+  - name: vagrant
+  - name: virtualbox
+  - name: viscosity
+  - name: vlc

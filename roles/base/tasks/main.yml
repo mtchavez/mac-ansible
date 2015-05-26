@@ -1,0 +1,24 @@
+---
+
+- name: Install homebrew
+  command: {{ brew_install_cmd }}
+    creates={{ brew_bin }}
+
+- name: Install brew-cask
+  command: brew install caskroom/cask/brew-cask
+    creates=/usr/local/bin/brew-cask
+
+- name: Install base homebrew packages
+  homebrew:
+    name={{ item.name }}
+    install_options={{ item.install_options | default("") }}
+  with_items: brew_base_packages
+
+- name: Install brew cask applications
+  homebrew_cask:
+    name={{ item.name }}
+    state={{ item.state | default("present") }}
+  with_items: brew_cask_applications
+
+- name: Link homebrew apps
+  command: brew linkapps
