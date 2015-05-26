@@ -1,13 +1,17 @@
 ---
 
 - name: Install homebrew
-  command: "{{ brew_install_cmd }} creates={{ brew_bin }}"
+  command: "{{ brew_install_cmd }}"
+  args:
+    creates: "{{ brew_bin }}"
   tags:
     - base
     - brew
 
 - name: Install brew-cask
-  command: "{{ brew_cask_install }} creates={{ brew_cask_bin }}"
+  command: "{{ brew_cask_install }}"
+  args:
+    creates: "{{ brew_cask_bin }}"
   tags:
     - base
     - brew
