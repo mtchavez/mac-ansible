@@ -1,0 +1,5 @@
+---
+
+home_dir: "{{ lookup('env', 'HOME') }}"
+
+# vim: ft=yaml:
