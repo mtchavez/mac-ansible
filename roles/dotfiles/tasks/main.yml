@@ -11,6 +11,5 @@
   command: "{{ dotfiles_install_cmd }}"
   args:
     chdir: "{{ dotfiles_dir }}"
-    creates: "{{ dotfiles_installed_file }}"
   tags:
     - dotfiles
