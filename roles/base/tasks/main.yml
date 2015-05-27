@@ -55,6 +55,7 @@
   tags:
     - base
     - brew
+    - brew-cask
 
 - name: ssh dir
   file:

@@ -86,6 +86,8 @@ brew_cask_applications:
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver
+  - name: time-out
+  - name: torbrowser
   - name: transmission
   - name: tunnelblick
   - name: vagrant
