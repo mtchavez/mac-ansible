@@ -8,6 +8,13 @@
     - base
     - brew
 
+- name: Update homebrew
+  command: brew update
+  tags:
+    - base
+    - brew
+    - update
+
 - name: Install brew-cask
   command: "{{ brew_cask_install }}"
   args:
@@ -31,6 +38,13 @@
     name={{ item.name }}
     state={{ item.state | default("present") }}
   with_items: brew_cask_applications
+  tags:
+    - base
+    - brew
+    - brew-cask
+
+- name: Cleanup cask
+  command: brew-cask cleanup
   tags:
     - base
     - brew
