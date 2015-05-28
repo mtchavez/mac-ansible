@@ -1,0 +1,15 @@
+---
+
+- name: Install node via homebrew
+  homebrew:
+    name=node
+    install_options={{ nodejs_brew_options }}
+  tags:
+    - brew
+    - nodejs
+
+- name: Install global npm packages
+  npm: name={{ item }} global=true
+  with_items: nodejs_npm_packages
+  tags:
+    - nodejs

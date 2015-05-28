@@ -1,0 +1,15 @@
+---
+
+nodejs_brew_options: "with-debug,with-icu4c,with-openssl"
+nodejs_npm_packages:
+  - bower
+  - coffee
+  - coffeelint
+  - cult
+  - grunt
+  - grunt-cli
+  - gulp
+  - jshint
+  - keybase
+  - keybase-installer
+  - yo
