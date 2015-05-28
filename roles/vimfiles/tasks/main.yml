@@ -11,14 +11,13 @@
   command: "{{ vimfiles_install_cmd }}"
   args:
     chdir: "{{ vimfiles_dir }}"
-    creates: "{{ vimfiles_installed_file }}"
   tags:
     - vimfiles
 
 - name: Install YCM
   command: "{{ ycm_install_cmd }}"
   args:
-    chdir: "{{ ycm_bundle_dir }}"
+    chdir: "{{ vimfiles_dir }}"
     creates: "{{ ycm_installed_file }}"
   tags:
     - vimfiles
