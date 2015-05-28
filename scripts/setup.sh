@@ -24,3 +24,9 @@ then
     display "Installing ansible"
     sudo pip install ansible
 fi
+
+if [ ! `which brew` ]
+then
+    display "Installing Homebrew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi

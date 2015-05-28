@@ -1,13 +1,5 @@
 ---
 
-- name: Install homebrew
-  command: "{{ brew_install_cmd }}"
-  args:
-    creates: "{{ brew_bin }}"
-  tags:
-    - base
-    - brew
-
 - name: Update homebrew
   command: brew update
   tags:
