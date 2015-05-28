@@ -83,8 +83,10 @@ brew_cask_applications:
   - name: keyboard-cleaner
   - name: keyboardcleantool
   - name: little-snitch
+  - name: packer
   - name: spotify
   - name: sublime-text
+  - name: terraform
   - name: the-unarchiver
   - name: time-out
   - name: torbrowser
