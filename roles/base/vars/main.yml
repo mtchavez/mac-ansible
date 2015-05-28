@@ -47,7 +47,6 @@ brew_base_packages:
   - name: mercurial
   - name: moreutils
   - name: phantomjs
-  # - name: pkg-config
   - name: postgresql
   - name: python
   - name: python3
