@@ -41,7 +41,7 @@ brew_base_packages:
   - name: lua
   - name: luajit
   - name: macvim
-    install_options: "custom-icons,override-system-vim,with-lua,with-luajit,with-python3"
+    install_options: "custom-icons,override-system-vim,with-lua,with-luajit"
   - name: makedepend
   - name: memcached
   - name: mercurial
