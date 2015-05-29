@@ -1,0 +1,12 @@
+---
+
+- name: Upgrade pip
+  command: pip install --upgrade pip
+  tags:
+    - python
+
+- name: Install python packages
+  pip: name={{ item }}
+  with_items: python_packages
+  tags:
+    - python
