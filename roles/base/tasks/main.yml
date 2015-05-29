@@ -62,3 +62,10 @@
     state=directory
   tags:
     - base
+
+- name: User tmp dir
+  file:
+    path="{{ home_dir }}/tmp"
+    state=directory
+  tags:
+    - base
