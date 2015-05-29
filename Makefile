@@ -9,7 +9,8 @@ setup:
 
 provision:
 	@echo "-----> Running ansible playbook to provision system..."
-	@time ansible-playbook mac-osx.yml --diff
+	@HOMEBREW_CASK_OPTS="--appdir=/Applications" \
+		time ansible-playbook mac-osx.yml --diff
 
 role:
 	@if [ "$($@)" = "" ]; then echo "Role is not defined. Pass role=rolename"; exit 1; fi
