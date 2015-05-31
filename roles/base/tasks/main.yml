@@ -20,6 +20,7 @@
   homebrew:
     name={{ item.name }}
     install_options={{ item.install_options | default("") }}
+    state=latest
   with_items: brew_base_packages
   tags:
     - base
