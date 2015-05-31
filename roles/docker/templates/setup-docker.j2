@@ -30,4 +30,13 @@ eval $(docker-machine env dev)
 # Get latest swarm image
 docker pull swarm:latest
 
+# Get latest docker-compose
+if [[ ! $(docker-compose --version | grep {{ docker_compose_version }}) ]]
+then
+  {{ docker_compose_install }}
+fi
+
+# Ensure it is executable
+chmod +x {{ docker_compose_bin }}
+
 # vim: ft=sh:
