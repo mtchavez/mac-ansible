@@ -1,0 +1,19 @@
+---
+
+- name: Docker install script
+  template:
+    src=install-docker.j2
+    dest={{ home_dir }}/bin/install-docker-machine
+    mode=0755
+  tags:
+    - docker
+
+- name: Run docker-machine install script
+  command: "{{ home_dir }}/bin/install-docker-machine"
+  tags:
+    - docker
+
+# - name: Install swarm
+#   docker_image: name=swarm
+#   tags:
+#     - docker

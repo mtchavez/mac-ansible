@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#
+# Installs docker-machine on OS X
+#
+
+# Get latest docker-machine
+if [[ ! $(docker-machine -v | grep {{ docker_machine_version }}) ]]
+then
+  {{ docker_machine_install }}
+fi
+
+# Ensure it is executable
+chmod +x {{ docker_machine_bin }}
+
+# Setup dev env
+if [[ ! $(docker-machine ls | grep {{ docker_machine_dev_name }}) ]]
+then
+    docker-machine create --driver virtualbox {{ docker_machine_dev_name }}
+fi
+
+# Start docker host if it is not running
+if [[ $(docker-machine ls | grep -i dev | grep -i stopped) ]]
+then
+    docker-machine start dev
+fi
+
+# Load in dev env
+eval $(docker-machine env dev)
+
+# Get latest swarm image
+docker pull swarm:latest
+
+# vim: ft=sh:

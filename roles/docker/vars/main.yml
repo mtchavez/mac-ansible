@@ -1,0 +1,9 @@
+---
+
+docker_machine_version: "0.2.0"
+docker_machine_bin: "/usr/local/bin/docker-machine"
+docker_machine_repo: "https://github.com/docker/machine"
+docker_machine_arch: "darwin-amd64"
+docker_machine_install_url: "{{ docker_machine_repo }}/releases/download/v{{ docker_machine_version }}/docker-machine_{{ docker_machine_arch }}"
+docker_machine_install: "curl -L {{ docker_machine_install_url }} > {{ docker_machine_bin }}"
+docker_machine_dev_name: "dev"
