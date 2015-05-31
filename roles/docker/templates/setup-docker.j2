@@ -25,7 +25,7 @@ then
 fi
 
 # Load in dev env
-eval $(docker-machine env dev)
+eval "$(docker-machine env dev)"
 
 # Get latest swarm image
 docker pull swarm:latest
