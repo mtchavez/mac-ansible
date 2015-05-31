@@ -35,12 +35,19 @@
     - brew
     - brew-cask
 
+- name: Cleanup homebrew
+  command: brew cleanup -s --force --prune=7
+  tags:
+    - brew
+    - cleanup
+
 - name: Cleanup cask
   command: brew-cask cleanup
   tags:
     - base
     - brew
     - brew-cask
+    - cleanup
 
 - name: Link homebrew apps
   command: brew linkapps
