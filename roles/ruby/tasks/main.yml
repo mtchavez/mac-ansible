@@ -2,7 +2,7 @@
 
 - name: Install rbenv via homebrew
   homebrew:
-    name={{ item.name }}
+    name={{ item.name }} state=latest
   with_items: ruby_brew_packages
   tags:
     - brew
