@@ -9,6 +9,6 @@
     - docker
 
 - name: Run docker setup install script
-  command: "{{ home_dir }}/bin/install-docker-machine"
+  command: "{{ home_dir }}/bin/setup-docker"
   tags:
     - docker
