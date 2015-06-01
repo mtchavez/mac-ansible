@@ -1,5 +1,11 @@
 ---
 
+- name: Install docker via homebrew
+  homebrew: name=docker
+  tags:
+    - brew
+    - docker
+
 - name: Docker install script
   template:
     src=setup-docker.j2
