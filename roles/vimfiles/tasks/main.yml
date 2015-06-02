@@ -21,3 +21,12 @@
     creates: "{{ ycm_installed_file }}"
   tags:
     - vimfiles
+
+- name: Install MacVim
+  homebrew:
+    name=macvim
+    install_options={{ macvim_install_options }}
+    state=latest
+  tags:
+    - vimfiles
+    - brew
