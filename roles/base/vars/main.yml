@@ -40,16 +40,13 @@ brew_base_packages:
   - name: libyaml
   - name: lua
   - name: luajit
-  - name: macvim
-    install_options: "custom-icons,override-system-vim,with-lua,with-luajit"
   - name: makedepend
   - name: memcached
   - name: mercurial
   - name: moreutils
   - name: phantomjs
   - name: postgresql
-  # Not sure why this affects Macvim and UltiSnips
-  # - name: python
+  - name: python
   # - name: python3
   - name: readline
   - name: redis
