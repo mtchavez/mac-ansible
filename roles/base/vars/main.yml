@@ -48,8 +48,9 @@ brew_base_packages:
   - name: moreutils
   - name: phantomjs
   - name: postgresql
-  - name: python
-  - name: python3
+  # Not sure why this affects Macvim and UltiSnips
+  # - name: python
+  # - name: python3
   - name: readline
   - name: redis
   - name: s3cmd
