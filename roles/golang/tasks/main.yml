@@ -8,15 +8,17 @@
     - brew
     - golang
 
-- name: Go path dir
-  file:
-    path={{ gopath_dir }}
-    state=directory
+- name: Go path dirs
+  command: "mkdir -p {{ gopath_dir}}/{{ item }}"
+  with_items:
+    - src
+    - pkg
+    - bin
   tags:
     - golang
 
 - name: Install golang packages
-  command: go get {{ item }}
+  command: go get -u -v {{ item }}
   with_items: golang_packages
   ignore_errors: yes
   tags:

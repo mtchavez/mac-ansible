@@ -1,7 +1,7 @@
 ---
 
 golang_brew_options: "with-cc-all"
-gopath_dir: "{{ home_dir }}/go"
+gopath_dir: "{{ workspace_dir }}/go"
 golang_packages:
   - github.com/bradfitz/goimports
   - github.com/golang/lint
