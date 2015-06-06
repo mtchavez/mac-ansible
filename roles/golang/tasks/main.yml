@@ -4,6 +4,7 @@
   homebrew:
     name=go
     install_options={{ golang_brew_options }}
+    state=latest
   tags:
     - brew
     - golang

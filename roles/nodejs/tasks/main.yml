@@ -4,6 +4,7 @@
   homebrew:
     name=node
     install_options={{ nodejs_brew_options }}
+    state=latest
   tags:
     - brew
     - nodejs

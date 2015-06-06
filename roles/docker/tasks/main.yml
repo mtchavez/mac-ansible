@@ -1,7 +1,9 @@
 ---
 
 - name: Install docker via homebrew
-  homebrew: name=docker
+  homebrew:
+    name=docker
+    state=latest
   tags:
     - brew
     - docker
