@@ -93,4 +93,5 @@ brew_cask_applications:
   - name: vagrant
   - name: virtualbox
   - name: viscosity
+  - name: vmware-fusion
   - name: vlc
