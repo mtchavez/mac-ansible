@@ -10,6 +10,7 @@ brew_base_packages:
   - name: bash
   - name: bash-completion
   - name: bazaar
+  - name: bfg
   - name: cmake
   - name: coreutils
   - name: cscope
