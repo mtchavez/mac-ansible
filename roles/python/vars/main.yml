@@ -4,3 +4,4 @@ python_packages:
   - virtualenv
   - virtualenvwrapper
   - boto
+  - awscli
