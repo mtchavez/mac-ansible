@@ -1,17 +1,17 @@
 ---
 
 # Machine
-docker_machine_version: "0.2.0"
+docker_machine_version: "0.3.0"
 docker_machine_bin: "/usr/local/bin/docker-machine"
 docker_machine_repo: "https://github.com/docker/machine"
 docker_machine_arch: "darwin-amd64"
 docker_machine_install_url: "{{ docker_machine_repo }}/releases/download/v{{ docker_machine_version }}/docker-machine_{{ docker_machine_arch }}"
-docker_machine_install: "curl -L {{ docker_machine_install_url }} > {{ docker_machine_bin }}"
+docker_machine_install: "curl --silent -L {{ docker_machine_install_url }} > {{ docker_machine_bin }}"
 docker_machine_dev_name: "dev"
 
 # Compose
-docker_compose_version: "1.2.0"
+docker_compose_version: "1.3.1"
 docker_compose_bin: "/usr/local/bin/docker-compose"
 docker_compose_repo: "https://github.com/docker/compose"
-docker_compose_install_url: "{{ docker_compose_repo }}/releases/download/v{{ docker_compose_version }}/docker-compose_`uname -s`-`uname -m`"
-docker_compose_install: "curl -L {{ docker_compose_install_url }} > {{ docker_compose_bin }}"
+docker_compose_install_url: "{{ docker_compose_repo }}/releases/download/{{ docker_compose_version }}/docker-compose-`uname -s`-`uname -m`"
+docker_compose_install: "curl --silent -L {{ docker_compose_install_url }} > {{ docker_compose_bin }}"
