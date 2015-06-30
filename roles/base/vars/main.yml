@@ -92,6 +92,7 @@ brew_cask_applications:
   - name: transmission
   - name: tunnelblick
   - name: vagrant
+  - name: vault
   - name: virtualbox
   - name: viscosity
   - name: vmware-fusion
