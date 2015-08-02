@@ -97,3 +97,9 @@ brew_cask_applications:
   - name: viscosity
   - name: vmware-fusion
   - name: vlc
+brew_cask_install_updates:
+  - atom
+  - julia
+  - packer
+  - terraform
+  - vault
