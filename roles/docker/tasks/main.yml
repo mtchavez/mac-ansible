@@ -8,6 +8,12 @@
     - brew
     - docker
 
+- name: Link docker
+  command: brew link --overwrite docker
+  tags:
+    - brew
+    - docker
+
 - name: Docker install script
   template:
     src=setup-docker.j2
