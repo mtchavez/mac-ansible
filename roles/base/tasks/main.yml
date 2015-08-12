@@ -1,7 +1,7 @@
 ---
 
 - name: Update homebrew
-  homebrew: update_homebrew=yes
+  command: brew update
   tags:
     - base
     - brew
@@ -37,7 +37,7 @@
     - brew-cask
 
 - name: Install updated brew cask applications
-  command: brew-cask install {{item}}
+  command: brew-cask install --force {{item}}
   with_items: brew_cask_install_updates
   tags:
     - base
