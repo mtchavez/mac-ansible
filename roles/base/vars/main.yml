@@ -97,9 +97,13 @@ brew_cask_applications:
   - name: viscosity
   - name: vmware-fusion
   - name: vlc
+  - name: youll-never-take-me-alive
 brew_cask_install_updates:
-  - atom
-  - julia
-  - packer
-  - terraform
-  - vault
+  - name: atom
+  - name: julia
+  - name: packer
+    force: "--force"
+  - name: terraform
+    force: "--force"
+  - name: vault
+    force: "--force"

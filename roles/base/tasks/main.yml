@@ -5,6 +5,7 @@
   tags:
     - base
     - brew
+    - brew-cask
     - update
 
 - name: Install brew-cask
@@ -37,7 +38,7 @@
     - brew-cask
 
 - name: Install updated brew cask applications
-  command: brew-cask install --force {{item}}
+  command: brew-cask install {{item.force | default("")}} {{item.name}}
   with_items: brew_cask_install_updates
   tags:
     - base
