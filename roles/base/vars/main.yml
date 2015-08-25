@@ -11,6 +11,7 @@ brew_base_packages:
   - name: bash-completion
   - name: bazaar
   - name: bfg
+  - name: clmatrix
   - name: cmake
   - name: coreutils
   - name: cscope
@@ -27,6 +28,7 @@ brew_base_packages:
   - name: gnu-sed
   - name: gnu-tar
   - name: graphviz
+  - name: htop
   - name: hub
   - name: influxdb
   - name: jq
