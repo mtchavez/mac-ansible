@@ -11,7 +11,7 @@ brew_base_packages:
   - name: bash-completion
   - name: bazaar
   - name: bfg
-  - name: clmatrix
+  - name: cmatrix
   - name: cmake
   - name: coreutils
   - name: cscope
