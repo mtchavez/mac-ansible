@@ -23,7 +23,7 @@ brew_base_packages:
   - name: fswatch
   - name: gettext
   - name: git
-    install_options: "with-gettext,with-pcre"
+    install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
   - name: go-app-engine-64
   - name: gnu-sed
   - name: gnu-tar
