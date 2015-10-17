@@ -57,6 +57,7 @@ brew_base_packages:
   - name: snappy
   - name: sqlite
   - name: the_silver_searcher
+  - name: tree
   - name: wget
   - name: zeromq
 brew_cask_applications:
