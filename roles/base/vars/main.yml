@@ -104,6 +104,8 @@ brew_cask_applications:
 brew_cask_install_updates:
   - name: atom
   - name: julia
+  - name: nomad
+    force: "--force"
   - name: otto
     force: "--force"
   - name: packer
