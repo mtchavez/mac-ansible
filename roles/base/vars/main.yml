@@ -104,6 +104,8 @@ brew_cask_applications:
 brew_cask_install_updates:
   - name: atom
   - name: julia
+  - name: otto
+    force: "--force"
   - name: packer
     force: "--force"
   - name: terraform
