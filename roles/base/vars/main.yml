@@ -76,11 +76,13 @@ brew_cask_applications:
   - name: google-hangouts
   - name: gpgtools
   - name: heroku-toolbelt
+  - name: hipchat
   - name: imagealpha
   - name: imageoptim
   - name: insomniax
   - name: istat-menus
   - name: iterm2
+  - name: java
   - name: julia
   - name: keyboard-cleaner
   - name: keyboardcleantool
