@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Installs nvm and default version
+#
+
+# Get install script for version and run it
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v{{nodejs_nvm_ver}}/install.sh | bash
+
+# Set up shell for nvm
+. ~/.nvm/nvm.sh
+
+# Install version
+{% for ver in nodejs_versions %}
+nvm install {{ver}}
+{% endfor %}
+
+# Set default
+nvm alias default {{nodejs_default_ver}}
+nvm use {{nodejs_default_ver}}
+
+{% for pkg in nodejs_npm_packages %}
+npm install -g {{pkg}}
+{% endfor %}
