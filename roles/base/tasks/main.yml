@@ -38,7 +38,7 @@
     - brew-cask
 
 - name: Install updated brew cask applications
-  command: brew-cask install {{item.force | default("")}} {{item.name}}
+  command: brew cask install {{item.force | default("")}} {{item.name}}
   with_items: brew_cask_install_updates
   tags:
     - base
@@ -48,12 +48,14 @@
 
 - name: Cleanup homebrew
   command: brew cleanup -s --force --prune=7
+  ignore_errors: True
   tags:
     - brew
     - cleanup
 
 - name: Cleanup cask
-  command: brew-cask cleanup
+  command: brew cask cleanup
+  ignore_errors: True
   tags:
     - base
     - brew
