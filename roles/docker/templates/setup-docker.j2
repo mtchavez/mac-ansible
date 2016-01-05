@@ -6,11 +6,8 @@
 # Get latest docker-machine
 if [[ ! $(docker-machine -v | grep {{ docker_machine_version }}) ]]
 then
-  {{ docker_machine_install }} >machine.zip && \
-  unzip machine.zip && \
-  rm machine.zip && \
-  mv -f docker-machine* /usr/local/bin
-
+  {{ docker_machine_install }} > /usr/local/bin/docker-machine
+  chmod +x /usr/local/bin/docker-machine
 fi
 
 # Ensure it is executable
