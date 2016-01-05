@@ -1,11 +1,11 @@
 all_dirs = $(shell echo "roles/$(role)/{defaults,files,handlers,library,meta,tasks,templates,vars}")
 main_dirs = $(shell echo "roles/$(role)/{defaults,handlers,meta,tasks,vars}")
 
-all: setup provision
+all: bootstrap provision
 
-setup:
+bootstrap:
 	@echo "-----> Running setup script"
-	@sh ./scripts/setup.sh
+	@sh ./script/bootstrap
 
 provision:
 	@echo "-----> Running ansible playbook to provision system..."
@@ -20,4 +20,4 @@ role:
 		echo "---\n# $(role) $$dirname\n" > ./roles/$(role)/$$dirname/main.yml ;\
 	done
 
-.PHONY: all, role, setup, provision
+.PHONY: all, role, bootstrap, provision

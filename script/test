@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# Sets up requirements to provision with ansible
+#
+
+#
+# Clean display function
+#
+# usage:
+#        display "My thing to output"
+#
+function display() {
+    echo "-----> $1"
+}
+
+echo "Running ansible playbook to provision system..."
+time ansible-playbook mac-osx.yml --diff
+
+# vim: ft=sh:
