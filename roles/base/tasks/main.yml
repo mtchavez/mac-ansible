@@ -8,15 +8,6 @@
     - brew-cask
     - update
 
-- name: Install brew-cask
-  command: "{{ brew_cask_install }}"
-  args:
-    creates: "{{ brew_cask_bin }}"
-  tags:
-    - base
-    - brew
-    - brew-cask
-
 - name: Install base homebrew packages
   homebrew:
     name={{ item.name }}
