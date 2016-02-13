@@ -11,3 +11,4 @@ golang_packages:
   - golang.org/x/tools/cmd/cover
   - golang.org/x/tools/cmd/godoc
   - golang.org/x/tools/cmd/vet
+  - github.com/pengwynn/flint
