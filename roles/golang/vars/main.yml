@@ -5,6 +5,7 @@ gopath_dir: "{{ workspace_dir }}/go"
 golang_packages:
   - github.com/bradfitz/goimports
   - github.com/golang/lint
+  - github.com/tools/godep
   - github.com/mitchellh/gox
   - github.com/smartystreets/goconvey
   - github.com/spf13/hugo
@@ -12,3 +13,5 @@ golang_packages:
   - golang.org/x/tools/cmd/godoc
   - golang.org/x/tools/cmd/vet
   - github.com/pengwynn/flint
+  - github.com/fatih/hclfmt
+  - github.com/spf13/hugo
