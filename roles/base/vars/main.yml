@@ -46,6 +46,8 @@ brew_base_packages:
   - name: memcached
   - name: mercurial
   - name: moreutils
+  - name: ocaml
+  - name: opam
   - name: phantomjs
   - name: postgresql
   - name: python
