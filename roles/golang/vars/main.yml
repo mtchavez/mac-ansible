@@ -3,7 +3,7 @@
 golang_brew_options: "with-cc-all"
 gopath_dir: "{{ workspace_dir }}/go"
 golang_packages:
-  - github.com/bradfitz/goimports
+  - golang.org/x/tools/cmd/goimports
   - github.com/golang/lint
   - github.com/tools/godep
   - github.com/mitchellh/gox
