@@ -10,7 +10,7 @@
 #        display "My thing to output"
 #
 function display() {
-    echo "-----> $1"
+    echo "----> $1"
 }
 
 if [ ! `which pip` ]
@@ -19,11 +19,7 @@ then
     sudo easy_install pip
 fi
 
-if [ ! `which ansible` ]
-then
-    display "Installing ansible"
-    sudo pip install ansible
-fi
+sudo pip install --upgrade -r requirements.txt
 
 if [ ! `which brew` ]
 then
