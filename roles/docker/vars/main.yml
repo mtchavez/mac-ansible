@@ -7,10 +7,10 @@ docker_machine_repo: "https://github.com/docker/machine"
 docker_machine_arch: "darwin-amd64"
 docker_machine_install_url: "{{ docker_machine_repo }}/releases/download/v{{ docker_machine_version }}/docker-machine-`uname -s`-`uname -m`"
 docker_machine_install: "curl --silent -L {{ docker_machine_install_url }}"
-docker_machine_dev_name: "dev"
+docker_machine_dev_name: "default"
 
 # Compose
-docker_compose_version: "1.6.0"
+docker_compose_version: "1.6.2"
 docker_compose_bin: "/usr/local/bin/docker-compose"
 docker_compose_repo: "https://github.com/docker/compose"
 docker_compose_install_url: "{{ docker_compose_repo }}/releases/download/{{ docker_compose_version }}/docker-compose-`uname -s`-`uname -m`"

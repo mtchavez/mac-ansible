@@ -20,13 +20,13 @@ then
 fi
 
 # Start docker host if it is not running
-if [[ $(docker-machine ls | grep -i dev | grep -i stopped) ]]
+if [[ $(docker-machine ls | grep -i {{ docker_machine_dev_name }} | grep -i stopped) ]]
 then
-    docker-machine start dev
+    docker-machine start {{ docker_machine_dev_name }}
 fi
 
 # Load in dev env
-eval "$(docker-machine env dev)"
+eval "$(docker-machine env {{ docker_machine_dev_name }})"
 
 # Get latest swarm image
 docker pull swarm:latest
