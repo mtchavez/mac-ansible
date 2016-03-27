@@ -1,25 +1,10 @@
 ---
 
-- name: Install node via homebrew
-  homebrew:
-    name=node
-    install_options={{ nodejs_brew_options }}
-    state=latest
-  tags:
-    - brew
-    - nodejs
-
-- name: Install global npm packages
-  npm: name={{ item }} global=true
-  with_items: nodejs_npm_packages
-  tags:
-    - nodejs
-
 - name: Nvm setup script
   template:
-    src=nvm-setup.j2
-    dest={{ home_dir }}/bin/setup-nvm
-    mode=0755
+    src: nvm-setup.j2
+    dest: "{{ home_dir }}/bin/setup-nvm"
+    mode: 0755
   tags:
     - nodejs
     - nvm
