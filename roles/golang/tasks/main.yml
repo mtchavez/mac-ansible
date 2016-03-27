@@ -2,9 +2,9 @@
 
 - name: Install golang via homebrew
   homebrew:
-    name=go
-    install_options={{ golang_brew_options }}
-    state=latest
+    name: go
+    install_options: "{{ golang_brew_options }}"
+    state: latest
   tags:
     - brew
     - golang
@@ -19,8 +19,9 @@
     - golang
 
 - name: Install golang packages
-  command: go get -u -v {{ item }}
-  with_items: golang_packages
+  command: "go get -u -v {{ item }}"
+  with_items: "{{ golang_default_packages }}"
   ignore_errors: yes
   tags:
     - golang
+    - dependencies

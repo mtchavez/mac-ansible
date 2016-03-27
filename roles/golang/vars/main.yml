@@ -2,16 +2,29 @@
 
 golang_brew_options: "with-cc-all"
 gopath_dir: "{{ workspace_dir }}/go"
-golang_packages:
+golang_default_packages:
+  # Golang tools
   - golang.org/x/tools/cmd/goimports
+  - golang.org/x/tools/cmd/cover
+  - golang.org/x/tools/cmd/godoc
+  - golang.org/x/tools/cmd/vet
+  - golang.org/x/tools/cmd/oracle
+  - golang.org/x/tools/cmd/gorename
+
+  # Common packages
   - github.com/golang/lint
   - github.com/tools/godep
   - github.com/mitchellh/gox
   - github.com/smartystreets/goconvey
   - github.com/spf13/hugo
-  - golang.org/x/tools/cmd/cover
-  - golang.org/x/tools/cmd/godoc
-  - golang.org/x/tools/cmd/vet
   - github.com/pengwynn/flint
   - github.com/fatih/hclfmt
-  - github.com/spf13/hugo
+
+  # vim-go dependencies
+  - github.com/nsf/gocode
+  - github.com/alecthomas/gometalinter
+  - github.com/rogpeppe/godef
+  - github.com/kisielk/errcheck
+  - github.com/jstemmer/gotags
+  - github.com/klauspost/asmfmt/cmd/asmfmt
+  - github.com/fatih/motion

@@ -3,10 +3,16 @@
 nodejs_nvm_ver: "0.29.0"
 nodejs_nvm_install_url: "https://raw.githubusercontent.com/creationix/nvm/v{{nodejs_nvm_ver}}/install.sh"
 nodejs_nvm_install_script: "{{home_dir}}/tmp/install.sh"
-nodejs_default_ver: "0.10"
+nodejs_default_ver: "5.9"
 nodejs_versions:
   - "0.10"
-nodejs_brew_options: "with-debug,with-icu4c,with-openssl"
+  - "0.12"
+  - "5.9"
+nodejs_versions_to_remove:
+  - "0.10.40"
+  - "0.10.41"
+  - "0.10.42"
+  - "5.8.0"
 nodejs_npm_packages:
   - bower
   - coffee

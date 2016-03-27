@@ -9,9 +9,14 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v{{nodejs_nvm_ver}}/in
 # Set up shell for nvm
 . ~/.nvm/nvm.sh
 
-# Install version
+# Install versions
 {% for ver in nodejs_versions %}
 nvm install {{ver}}
+{% endfor %}
+
+# Uninstall versions
+{% for ver in nodejs_versions_to_remove %}
+nvm uninstall {{ver}}
 {% endfor %}
 
 # Set default

@@ -2,23 +2,23 @@
 
 - name: Install docker via homebrew
   homebrew:
-    name=docker
-    state=latest
+    name: docker
+    state: latest
   tags:
     - brew
     - docker
 
 - name: Link docker
-  command: brew link --overwrite docker
+  command: "brew link --overwrite docker"
   tags:
     - brew
     - docker
 
 - name: Docker install script
   template:
-    src=setup-docker.j2
-    dest={{ home_dir }}/bin/setup-docker
-    mode=0755
+    src: setup-docker.j2
+    dest: "{{ home_dir }}/bin/setup-docker"
+    mode: 0755
   tags:
     - docker
 

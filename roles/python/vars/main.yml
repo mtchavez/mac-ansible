@@ -1,6 +1,7 @@
 ---
 
 python_packages:
+  - pip
   - virtualenv
   - virtualenvwrapper
   - boto
