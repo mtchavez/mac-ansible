@@ -2,8 +2,8 @@
 
 - name: Get vimfiles repo
   git:
-    repo={{ vimfiles_repo }}
-    dest={{ workspace_dir }}/vimfiles
+    repo: "{{ vimfiles_repo }}"
+    dest: "{{ workspace_dir }}/vimfiles"
   tags:
     - vimfiles
 
@@ -24,9 +24,9 @@
 
 - name: Install MacVim
   homebrew:
-    name=macvim
-    install_options={{ macvim_install_options }}
-    state=latest
+    name: macvim
+    install_options: "{{ macvim_install_options }}"
+    state: latest
   tags:
     - vimfiles
     - brew
