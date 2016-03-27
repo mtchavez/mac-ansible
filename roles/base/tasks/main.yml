@@ -1,7 +1,7 @@
 ---
 
 - name: Update homebrew
-  command: brew update
+  command: "brew update"
   tags:
     - base
     - brew
@@ -10,27 +10,27 @@
 
 - name: Install base homebrew packages
   homebrew:
-    name={{ item.name }}
-    install_options={{ item.install_options | default("") }}
-    state=latest
-  with_items: brew_base_packages
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ brew_base_packages }}"
   tags:
     - base
     - brew
 
 - name: Install brew cask applications
   homebrew_cask:
-    name={{ item.name }}
-    state={{ item.state | default("present") }}
-  with_items: brew_cask_applications
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ brew_cask_applications }}"
   tags:
     - base
     - brew
     - brew-cask
 
 - name: Install updated brew cask applications
-  command: brew cask install {{item.force | default("")}} {{item.name}}
-  with_items: brew_cask_install_updates
+  command: "brew cask install {{ item.force | default('') }} {{ item.name }}"
+  with_items: "{{ brew_cask_install_updates }}"
   tags:
     - base
     - brew
@@ -38,14 +38,14 @@
     - brew-cask-updates
 
 - name: Cleanup homebrew
-  command: brew cleanup -s --force --prune=7
+  command: "brew cleanup -s --force --prune=7"
   ignore_errors: True
   tags:
     - brew
     - cleanup
 
 - name: Cleanup cask
-  command: brew cask cleanup
+  command: "brew cask cleanup"
   ignore_errors: True
   tags:
     - base
@@ -54,7 +54,7 @@
     - cleanup
 
 - name: Link homebrew apps
-  command: brew linkapps
+  command: "brew linkapps"
   tags:
     - base
     - brew
@@ -62,21 +62,21 @@
 
 - name: ssh dir
   file:
-    path={{ home_dir }}/.ssh
-    state=directory
+    path: "{{ home_dir }}/.ssh"
+    state: directory
   tags:
     - base
 
 - name: Project workspace
   file:
-    path={{ workspace_dir }}
-    state=directory
+    path: "{{ workspace_dir }}"
+    state: directory
   tags:
     - base
 
 - name: User tmp dir
   file:
-    path="{{ home_dir }}/tmp"
-    state=directory
+    path: "{{ home_dir }}/tmp"
+    state: directory
   tags:
     - base
