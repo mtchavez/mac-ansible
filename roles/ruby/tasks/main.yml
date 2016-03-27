@@ -2,31 +2,51 @@
 
 - name: Install rbenv via homebrew
   homebrew:
-    name={{ item.name }} state=latest
-  with_items: ruby_brew_packages
+    name: "{{ item.name }}"
+    state: latest
+  with_items: "{{ ruby_brew_packages }}"
   tags:
     - brew
     - ruby
+    - rbenv
+
+- name: Write default-gem file
+  template:
+    src: default-gems.j2
+    dest: "{{ ruby_rbenv_default_gems_file }}"
+  tags:
+    - ruby
+    - rbenv
 
 - name: Install ruby versions
-  command: rbenv install {{ item }} creates={{ home_dir }}/.rbenv/versions/{{ item }}
-  with_items: ruby_versions
-  tags: ruby
+  command: "rbenv install {{ item }}"
+  args:
+    creates: "{{ home_dir }}/.rbenv/versions/{{ item }}"
+  with_items: "{{ ruby_versions }}"
+  tags:
+    - ruby
+    - rbenv
 
 - name: Check ruby global file exists
-  stat: path={{ ruby_global_file }}
+  stat:
+    path: "{{ ruby_global_file }}"
   register: ruby_global_exists
   tags:
     - ruby
+    - rbenv
 
 - name: Set global ruby version
-  command: rbenv global {{ ruby_global }}
+  command: "rbenv global {{ ruby_global }}"
   when: not ruby_global_exists.stat.exists or lookup('file', ruby_global_file) != ruby_global
   tags:
     - ruby
+    - rbenv
 
 - name: Install ruby gems
-  gem: name={{ item }}
-  with_items: ruby_gems
+  gem:
+    name: "{{ item }}"
+  with_items: "{{ ruby_default_gems }}"
   tags:
     - ruby
+    - dependencies
+    - gems
