@@ -1,8 +1,5 @@
 ---
 
-ruby_versions:
-  - "2.2.2"
-  - "2.3.0"
 ruby_brew_packages:
   - name: rbenv
   - name: rbenv-bundler
@@ -12,6 +9,8 @@ ruby_global: "2.2.2"
 ruby_global_file: "{{ home_dir + '/.rbenv/version' }}"
 ruby_versions:
   - "{{ ruby_global }}"
+  - "2.2.2"
+  - "2.3.0"
 ruby_gems:
   - bundler
   - rubocop
