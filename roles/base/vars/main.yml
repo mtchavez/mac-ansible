@@ -50,6 +50,7 @@ brew_base_packages:
   - name: opam
   - name: phantomjs
   - name: postgresql
+  - name: pyenv
   - name: python
   # - name: python3
   - name: readline
