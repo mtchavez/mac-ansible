@@ -9,9 +9,7 @@ nodejs_versions:
   - "0.12"
   - "5.10"
 nodejs_versions_to_remove:
-  - "0.10.40"
-  - "0.10.41"
-  - "0.10.42"
+  - "0.10.43"
   - "5.9.1"
 nodejs_npm_packages:
   - bower
