@@ -1,7 +1,7 @@
 ---
 
 # Machine
-docker_machine_version: "0.6.0"
+docker_machine_version: "0.7.0"
 docker_machine_bin: "/usr/local/bin/docker-machine"
 docker_machine_repo: "https://github.com/docker/machine"
 docker_machine_arch: "darwin-amd64"
