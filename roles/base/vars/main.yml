@@ -52,7 +52,6 @@ brew_base_packages:
   - name: postgresql
   - name: pyenv
   - name: python
-  # - name: python3
   - name: readline
   - name: redis
   - name: s3cmd
