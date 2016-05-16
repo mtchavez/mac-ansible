@@ -21,6 +21,7 @@ nodejs_npm_packages:
   - grunt-cli
   - gulp
   - jshint
+  - jsxhint
   - keybase
   - keybase-installer
   - yo
