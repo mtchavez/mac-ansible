@@ -17,6 +17,7 @@ nodejs_npm_packages:
   - coffee
   - coffeelint
   - cult
+  - eslint
   - grunt
   - grunt-cli
   - gulp
