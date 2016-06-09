@@ -76,7 +76,6 @@ brew_cask_applications:
   - name: google-chrome
   - name: google-hangouts
   - name: gpgtools
-  - name: heroku-toolbelt
   - name: hipchat
   - name: imagealpha
   - name: imageoptim
@@ -106,6 +105,8 @@ brew_cask_applications:
   - name: youll-never-take-me-alive
 brew_cask_install_updates:
   - name: atom
+  - name: heroku-toolbelt
+    force: "--force"
   - name: julia
   - name: nomad
     force: "--force"
