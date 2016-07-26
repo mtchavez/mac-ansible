@@ -26,6 +26,7 @@ brew_base_packages:
   - name: gnu-sed
   - name: gnu-tar
   - name: graphviz
+  - name: heroku-toolbelt
   - name: htop
   - name: hub
   - name: influxdb
@@ -105,8 +106,6 @@ brew_cask_applications:
   - name: youll-never-take-me-alive
 brew_cask_install_updates:
   - name: atom
-  - name: heroku-toolbelt
-    force: "--force"
   - name: julia
   - name: nomad
     force: "--force"
