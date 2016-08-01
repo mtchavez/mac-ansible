@@ -1,28 +1,19 @@
 ---
 
-- name: Install docker via homebrew
-  homebrew:
-    name: docker
-    state: latest
+- name: Install updated docker brew cask applications
+  command: "brew cask install {{ item.force | default('') }} {{ item.name }}"
+  with_items: "{{ docker_brew_cask_apps }}"
   tags:
     - brew
+    - brew-cask
+    - brew-cask-updates
     - docker
 
-- name: Link docker
-  command: "brew link --overwrite docker"
-  tags:
-    - brew
-    - docker
-
-- name: Docker install script
-  template:
+- name: Remove old docker install script
+  file:
     src: setup-docker.j2
     dest: "{{ home_dir }}/bin/setup-docker"
     mode: 0755
-  tags:
-    - docker
-
-- name: Run docker setup install script
-  command: "{{ home_dir }}/bin/setup-docker"
+    state: absent
   tags:
     - docker
