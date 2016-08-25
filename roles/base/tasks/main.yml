@@ -30,7 +30,7 @@
     - brew-cask
 
 - name: Cleanup homebrew
-  command: "brew cleanup -s --force --prune=7"
+  command: "brew cleanup -s"
   ignore_errors: True
   tags:
     - brew
