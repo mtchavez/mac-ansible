@@ -22,6 +22,7 @@ brew_base_packages:
   - name: gettext
   - name: git
     install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
+  - name: git-extras
   - name: go-app-engine-64
   - name: gnu-sed
   - name: gnu-tar
@@ -46,8 +47,11 @@ brew_base_packages:
   - name: memcached
   - name: mercurial
   - name: moreutils
+  - name: nomad
   - name: ocaml
   - name: opam
+  - name: otto
+  - name: packer
   - name: phantomjs
   - name: postgresql
   - name: pyenv
@@ -58,8 +62,10 @@ brew_base_packages:
   - name: s3cmd
   - name: snappy
   - name: sqlite
+  - name: terraform
   - name: the_silver_searcher
   - name: tree
+  - name: vault
   - name: wget
   - name: zeromq
 brew_cask_applications:
@@ -68,6 +74,7 @@ brew_cask_applications:
   - name: arduino
   - name: arq
   - name: atom
+    install_options: "force"
   - name: bartender
   - name: caffeine
   - name: cloak
@@ -88,32 +95,16 @@ brew_cask_applications:
   - name: keyboard-cleaner
   - name: keyboardcleantool
   - name: little-snitch
-  - name: packer
   - name: spotify
   - name: sublime-text
-  - name: terraform
   - name: the-unarchiver
   - name: time-out
   - name: torbrowser
   - name: transmission
   - name: tunnelblick
   - name: vagrant
-  - name: vault
   - name: virtualbox
   - name: viscosity
   - name: vmware-fusion
   - name: vlc
   - name: youll-never-take-me-alive
-brew_cask_install_updates:
-  - name: atom
-  - name: julia
-  - name: nomad
-    force: "--force"
-  - name: otto
-    force: "--force"
-  - name: packer
-    force: "--force"
-  - name: terraform
-    force: "--force"
-  - name: vault
-    force: "--force"

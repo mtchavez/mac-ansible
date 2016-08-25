@@ -22,20 +22,12 @@
   homebrew_cask:
     name: "{{ item.name }}"
     state: "{{ item.state | default('present') }}"
+    install_options: "{{item.install_options | default('') }}"
   with_items: "{{ brew_cask_applications }}"
   tags:
     - base
     - brew
     - brew-cask
-
-- name: Install updated brew cask applications
-  command: "brew cask install {{ item.force | default('') }} {{ item.name }}"
-  with_items: "{{ brew_cask_install_updates }}"
-  tags:
-    - base
-    - brew
-    - brew-cask
-    - brew-cask-updates
 
 - name: Cleanup homebrew
   command: "brew cleanup -s --force --prune=7"
