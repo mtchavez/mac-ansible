@@ -23,6 +23,4 @@ nodejs_npm_packages:
   - gulp
   - jshint
   - jsxhint
-  - keybase
-  - keybase-installer
   - yo
