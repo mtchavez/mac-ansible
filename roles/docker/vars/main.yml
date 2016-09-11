@@ -2,4 +2,4 @@
 
 docker_brew_cask_apps:
   - name: docker
-  - name: dockertoolbox
+  - name: docker-toolbox
