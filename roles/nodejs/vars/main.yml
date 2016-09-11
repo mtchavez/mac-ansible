@@ -3,11 +3,12 @@
 nodejs_nvm_ver: "0.29.0"
 nodejs_nvm_install_url: "https://raw.githubusercontent.com/creationix/nvm/v{{nodejs_nvm_ver}}/install.sh"
 nodejs_nvm_install_script: "{{home_dir}}/tmp/install.sh"
-nodejs_default_ver: "5.12"
+nodejs_default_ver: "6.5"
 nodejs_versions:
   - "0.10"
   - "0.12"
   - "5.12"
+  - "6.5"
 nodejs_versions_to_remove:
   - "0.10.43"
   - "0.12.12"
