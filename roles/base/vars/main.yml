@@ -93,6 +93,7 @@ brew_cask_applications:
   - name: iterm2
   - name: java
   - name: julia
+  - name: keybase
   - name: keyboard-cleaner
   - name: keyboardcleantool
   - name: little-snitch
