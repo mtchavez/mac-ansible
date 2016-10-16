@@ -24,6 +24,7 @@ brew_base_packages:
     install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
   - name: git-extras
   - name: git-lfs
+  - name: git-secrets
   - name: go-app-engine-64
   - name: gnu-sed
   - name: gnu-tar
