@@ -85,7 +85,6 @@ brew_cask_applications:
   - name: google-chrome
   - name: google-hangouts
   - name: gpgtools
-  - name: hipchat
   - name: imagealpha
   - name: imageoptim
   - name: insomniax
@@ -94,7 +93,6 @@ brew_cask_applications:
   - name: java
   - name: julia
   - name: keybase
-  - name: keyboard-cleaner
   - name: keyboardcleantool
   - name: little-snitch
   - name: spotify
@@ -102,7 +100,6 @@ brew_cask_applications:
   - name: the-unarchiver
   - name: time-out
   - name: torbrowser
-  - name: transmission
   - name: tunnelblick
   - name: vagrant
   - name: virtualbox
