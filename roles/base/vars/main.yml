@@ -32,9 +32,7 @@ brew_base_packages:
   - name: heroku-toolbelt
   - name: htop
   - name: hub
-  - name: influxdb
   - name: jq
-  - name: leveldb
   - name: libevent
   - name: libffi
   - name: libidn
