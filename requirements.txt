@@ -1,3 +1,2 @@
-# ansible
--e git+git://github.com/ansible/ansible#egg=ansible-2.2-beta
+ansible
 boto
