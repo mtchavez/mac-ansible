@@ -54,8 +54,6 @@ brew_base_packages:
   - name: packer
   - name: phantomjs
   - name: postgresql
-  - name: pyenv
-  - name: pyenv-virtualenv
   - name: python
   - name: readline
   - name: redis
