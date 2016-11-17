@@ -3,7 +3,7 @@
 - name: Get vimfiles repo
   git:
     repo: "{{ vimfiles_repo }}"
-    dest: "{{ workspace_dir }}/vimfiles"
+    dest: "{{ vimfiles_dir }}"
   tags:
     - vimfiles
 

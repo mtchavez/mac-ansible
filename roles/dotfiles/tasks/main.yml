@@ -3,7 +3,7 @@
 - name: Get dotfiles repo
   git:
     repo: "{{ dotfiles_repo }}"
-    dest: "{{ workspace_dir }}/dotfiles"
+    dest: "{{ dotfiles_dir }}"
   tags:
     - dotfiles
 

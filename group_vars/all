@@ -2,5 +2,6 @@
 
 home_dir: "{{ lookup('env', 'HOME') }}"
 workspace_dir: "{{ home_dir }}/Projects"
+documents_dir: "{{ home_dir }}/Documents"
 
 # vim: ft=yaml:
