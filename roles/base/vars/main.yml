@@ -63,6 +63,7 @@ brew_base_packages:
   - name: sqlite
   - name: terraform
   - name: the_silver_searcher
+  - name: tmux
   - name: tree
   - name: vault
   - name: wget
