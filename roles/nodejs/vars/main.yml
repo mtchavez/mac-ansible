@@ -7,13 +7,15 @@ nodejs_default_ver: "6.5"
 nodejs_versions:
   - "0.10"
   - "0.12"
-  - "5.12"
+  - "4.6"
   - "6.5"
 nodejs_versions_to_remove:
   - "0.10.43"
   - "0.12.12"
+  - "4.2.4"
   - "5.9.1"
   - "5.10.1"
+  - "5.12.0"
 nodejs_npm_packages:
   - bower
   - coffee
