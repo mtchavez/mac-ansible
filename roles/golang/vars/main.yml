@@ -10,7 +10,7 @@ golang_default_packages:
   - golang.org/x/tools/cmd/gorename
 
   # Common packages
-  - github.com/golang/lint
+  - github.com/golang/lint/golint
   - github.com/tools/godep
   - github.com/mitchellh/gox
   - github.com/smartystreets/goconvey
