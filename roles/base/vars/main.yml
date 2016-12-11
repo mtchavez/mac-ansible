@@ -26,6 +26,7 @@ brew_base_packages:
   - name: git-lfs
   - name: git-secrets
   - name: go-app-engine-64
+  - name: goenv
   - name: gnu-sed
   - name: gnu-tar
   - name: graphviz
