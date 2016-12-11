@@ -65,6 +65,7 @@ brew_base_packages:
   - name: terraform
   - name: the_silver_searcher
   - name: tmux
+    install_options: "with-utf8proc"
   - name: tree
   - name: vault
   - name: wget
