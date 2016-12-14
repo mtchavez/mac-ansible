@@ -42,6 +42,7 @@ brew_base_packages:
   - name: libpng
   - name: libxml2
   - name: libyaml
+  - name: lorem
   - name: lua
   - name: luajit
   - name: makedepend
