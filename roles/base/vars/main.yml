@@ -9,6 +9,7 @@ brew_base_packages:
   - name: bash
   - name: bash-completion
   - name: bazaar
+  - name: certbot
   - name: cmatrix
   - name: cmake
   - name: coreutils
