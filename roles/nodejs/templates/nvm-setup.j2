@@ -16,6 +16,7 @@ nvm install {{ver}}
 
 # Uninstall versions
 {% for ver in nodejs_versions_to_remove %}
+nvm uninstall {{ ver }}
 if [ -d $HOME/.nvm/versions/node/v{{ ver }} ]; then
   rm -R $HOME/.nvm/versions/node/v{{ ver }}
 fi
