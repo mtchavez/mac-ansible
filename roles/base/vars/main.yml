@@ -70,6 +70,7 @@ brew_base_packages:
     install_options: "with-utf8proc"
   - name: tree
   - name: vault
+  - name: watchman
   - name: wget
   - name: zeromq
 brew_cask_applications:
