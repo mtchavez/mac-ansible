@@ -17,6 +17,8 @@ golang_default_packages:
   - github.com/spf13/hugo
   - github.com/pengwynn/flint
   - github.com/fatih/hclfmt
+  - github.com/davecheney/httpstat
+  - github.com/github/hub
 
   # vim-go dependencies
   - github.com/nsf/gocode
