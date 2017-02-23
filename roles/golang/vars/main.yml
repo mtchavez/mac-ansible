@@ -8,6 +8,7 @@ golang_default_packages:
   - golang.org/x/tools/cmd/cover
   - golang.org/x/tools/cmd/godoc
   - golang.org/x/tools/cmd/gorename
+  - golang.org/x/tools/cmd/guru
 
   # Common packages
   - github.com/golang/lint/golint
@@ -28,3 +29,7 @@ golang_default_packages:
   - github.com/jstemmer/gotags
   - github.com/klauspost/asmfmt/cmd/asmfmt
   - github.com/fatih/motion
+
+  # Atom go dependencies
+  - github.com/sqs/goreturns
+  - github.com/zmb3/gogetdoc
