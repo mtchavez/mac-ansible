@@ -9,6 +9,16 @@
     - brew-cask-updates
     - docker
 
+- name: Install docker homebrew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ docker_brew_packages }}"
+  tags:
+    - brew
+    - docker
+
 - name: Remove old docker install script
   file:
     src: setup-docker.j2
