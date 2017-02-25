@@ -73,6 +73,7 @@ brew_base_packages:
   - name: vault
   - name: watchman
   - name: wget
+  - name: xhyve
   - name: yarn
   - name: zeromq
 brew_cask_applications:
