@@ -35,6 +35,7 @@ brew_base_packages:
   - name: htop
   - name: hub
   - name: jq
+  - name: kubectl
   - name: libevent
   - name: libffi
   - name: libidn
