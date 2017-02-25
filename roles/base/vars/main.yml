@@ -100,6 +100,7 @@ brew_cask_applications:
   - name: keyboardcleantool
   - name: little-snitch
   - name: macid
+  - name: minikube
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver
