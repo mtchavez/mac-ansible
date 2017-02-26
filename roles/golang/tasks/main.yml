@@ -24,4 +24,5 @@
   ignore_errors: yes
   tags:
     - golang
+    - godep
     - dependencies
