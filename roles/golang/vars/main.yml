@@ -20,6 +20,7 @@ golang_default_packages:
   - github.com/fatih/hclfmt
   - github.com/davecheney/httpstat
   - github.com/github/hub
+  - github.com/mvdan/unparam
 
   # vim-go dependencies
   - github.com/nsf/gocode
