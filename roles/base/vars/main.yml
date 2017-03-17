@@ -103,6 +103,7 @@ brew_cask_applications:
   - name: little-snitch
   - name: macid
   - name: minikube
+    install_options: "--force"
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver
