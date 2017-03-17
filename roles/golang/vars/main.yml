@@ -34,3 +34,4 @@ golang_default_packages:
   # Atom go dependencies
   - github.com/sqs/goreturns
   - github.com/zmb3/gogetdoc
+  - github.com/derekparker/delve/cmd/dlv
