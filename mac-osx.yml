@@ -8,6 +8,7 @@
     - dotfiles
     - vimfiles
     - ruby
+    - erlang
     - golang
     - nodejs
     - python
