@@ -1,0 +1,11 @@
+---
+
+- name: Install brew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ elixir_brew_packages }}"
+  tags:
+    - elixir
+    - brew
