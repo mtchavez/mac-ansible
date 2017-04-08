@@ -30,3 +30,41 @@
   tags:
     - vimfiles
     - brew
+
+- name: Install Neovim
+  homebrew:
+    name: neovim/neovim/neovim
+    state: latest
+  tags:
+    - vimfiles
+    - neovim
+    - brew
+
+- name: Neovim symlink .vim folder
+  file:
+    src: "{{ home_dir }}/.vim"
+    dest: "{{ home_dir }}/.config/nvim"
+    state: link
+  tags:
+    - vimfiles
+    - neovim
+    - brew
+
+- name: Neovim symlink .vimrc
+  file:
+    src: "{{ home_dir }}/.vimrc"
+    dest: "{{ home_dir }}/.config/nvim/init.vim"
+    state: link
+  tags:
+    - vimfiles
+    - neovim
+    - brew
+
+- name: Install neovim pip package
+  pip:
+    name: neovim
+    state: latest
+  tags:
+    - vimfiles
+    - neovim
+    - python
