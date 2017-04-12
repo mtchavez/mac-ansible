@@ -85,6 +85,7 @@ brew_cask_applications:
   - name: bartender
   - name: caffeine
   - name: cloak
+  - name: divvy
   - name: dropbox
   - name: firefox
   - name: flux
