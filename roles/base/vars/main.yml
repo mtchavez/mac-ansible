@@ -91,6 +91,7 @@ brew_cask_applications:
   - name: google-chrome
   - name: google-hangouts
   - name: gpgtools
+  - name: harvest
   - name: imagealpha
   - name: imageoptim
   - name: insomniax
