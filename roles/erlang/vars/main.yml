@@ -2,4 +2,4 @@
 
 erlang_brew_packages:
   - name: erlang
-  - name: rebar
+  - name: rebar3
