@@ -81,11 +81,12 @@ brew_cask_applications:
   - name: appzapper
   - name: arduino
   - name: atom
-    install_options: "force"
+    install_options: "--force"
   - name: bartender
   - name: caffeine
   - name: cloak
   - name: divvy
+    install_options: "--force"
   - name: dropbox
   - name: firefox
   - name: flux
@@ -93,6 +94,7 @@ brew_cask_applications:
   - name: google-hangouts
   - name: gpgtools
   - name: harvest
+    install_options: "--force"
   - name: imagealpha
   - name: imageoptim
   - name: insomniax
@@ -105,7 +107,7 @@ brew_cask_applications:
   - name: little-snitch
   - name: macid
   - name: minikube
-    install_options: "force"
+    install_options: "--force"
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver
