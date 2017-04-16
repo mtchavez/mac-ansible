@@ -118,3 +118,6 @@ brew_cask_applications:
   - name: vmware-fusion
   - name: vlc
   - name: youll-never-take-me-alive
+brew_taps:
+  - name: caskroom/versions
+  - name: homebrew/science
