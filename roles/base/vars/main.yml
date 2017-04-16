@@ -117,6 +117,7 @@ brew_cask_applications:
   - name: viscosity
   - name: vmware-fusion
   - name: vlc
+  - name: whatsapp
   - name: youll-never-take-me-alive
 brew_taps:
   - name: caskroom/versions
