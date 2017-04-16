@@ -26,6 +26,12 @@ fi
 nvm alias default {{nodejs_default_ver}}
 nvm use {{nodejs_default_ver}}
 
+# Base packages
 {% for pkg in nodejs_npm_packages %}
+npm install -g {{pkg}}
+{% endfor %}
+
+# Elm packages
+{% for pkg in nodejs_elm_packages %}
 npm install -g {{pkg}}
 {% endfor %}

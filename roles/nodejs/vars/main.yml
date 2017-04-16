@@ -38,3 +38,7 @@ nodejs_npm_packages:
   - jshint
   - jsxhint
   - yo
+nodejs_elm_packages:
+  - elm
+  - elm-test
+  - elm-oracle
