@@ -40,5 +40,6 @@ nodejs_npm_packages:
   - yo
 nodejs_elm_packages:
   - elm
-  - elm-test
+  - elm-format
   - elm-oracle
+  - elm-test
