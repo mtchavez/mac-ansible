@@ -1,0 +1,22 @@
+---
+
+- name: Install tmux homebrew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ tmux_brew_packages }}"
+  tags:
+    - tmux
+    - brew
+
+- name: Install tpm
+  git:
+    repo: "{{ tmux_tpm_repo }}"
+    dest: "{{ tmux_tpm_dir }}"
+    clone: yes
+    update: yes
+  tags:
+    - tmux
+    - tmux-plugins
+
