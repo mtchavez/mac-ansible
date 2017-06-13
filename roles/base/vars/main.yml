@@ -100,7 +100,7 @@ brew_cask_applications:
   - name: java
   - name: julia
   - name: keybase
-  - name: keyboardcleantool
+  # - name: keyboardcleantool
   - name: little-snitch
   - name: macid
   - name: minikube
