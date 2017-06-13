@@ -85,7 +85,6 @@ brew_cask_applications:
   - name: cloak
   - name: divvy
     install_options: "--force"
-  - name: dropbox
   - name: firefox
   - name: flux
   - name: google-chrome
