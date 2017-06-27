@@ -83,8 +83,6 @@ brew_cask_applications:
   - name: bartender
   - name: caffeine
   - name: cloak
-  - name: divvy
-    install_options: "--force"
   - name: firefox
   - name: flux
   - name: google-chrome
