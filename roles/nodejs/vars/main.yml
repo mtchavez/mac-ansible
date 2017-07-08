@@ -27,6 +27,8 @@ nodejs_versions_to_remove:
   - "5.12.0"
   - "6.5.0"
 nodejs_npm_packages:
+  - babel
+  - babel-eslint
   - coffee
   - coffeelint
   - cult
@@ -35,11 +37,10 @@ nodejs_npm_packages:
   - eslint-plugin-import
   - eslint-plugin-jsx-a11y
   - eslint-plugin-react
+  - eslint-plugin-flowtype
   - grunt
   - grunt-cli
   - gulp
-  - jshint
-  - jsxhint
   - yo
 nodejs_elm_packages:
   - elm
