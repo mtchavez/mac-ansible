@@ -11,6 +11,9 @@ python_packages:
   - awscli
   - neovim
   - ansible-lint
+  - autopep8
+  - flake8
+  - pylint
 python_pyenv_install_cmd: "CFLAGS=\"-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include\" LDFLAGS=\"-L$(brew --prefix openssl)/lib -L/usr/local/opt/sqlite/lib\" pyenv install"
 python_use_pyenv: False
 python_pyenv_versions:
