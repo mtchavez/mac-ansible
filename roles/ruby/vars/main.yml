@@ -18,3 +18,4 @@ ruby_default_gems:
   - rake
   - reek
   - rubocop
+  - brakeman
