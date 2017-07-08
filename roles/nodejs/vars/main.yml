@@ -31,6 +31,10 @@ nodejs_npm_packages:
   - coffeelint
   - cult
   - eslint
+  - eslint-config-airbnb
+  - eslint-plugin-import
+  - eslint-plugin-jsx-a11y
+  - eslint-plugin-react
   - grunt
   - grunt-cli
   - gulp
