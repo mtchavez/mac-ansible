@@ -46,6 +46,7 @@
   gem:
     name: "{{ item }}"
   with_items: "{{ ruby_default_gems }}"
+  ignore_errors: true
   tags:
     - ruby
     - dependencies
