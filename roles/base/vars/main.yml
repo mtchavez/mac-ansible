@@ -108,6 +108,7 @@ brew_cask_applications:
   - name: sequel-pro
   - name: spotify
   - name: sublime-text
+  - name: swiftlint
   - name: the-unarchiver
   - name: time-out
   - name: torbrowser
