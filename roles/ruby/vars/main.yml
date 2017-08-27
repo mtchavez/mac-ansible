@@ -15,6 +15,7 @@ ruby_versions:
   - "2.2.2"
 ruby_default_gems:
   - bundler
+  - bundler-audit
   - rake
   - reek
   - rubocop
