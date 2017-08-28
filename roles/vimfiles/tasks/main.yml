@@ -68,3 +68,12 @@
     - vimfiles
     - neovim
     - python
+
+- name: Install vim-vint pip package
+  pip:
+    name: vim-vint
+    state: latest
+  tags:
+    - vimfiles
+    - python
+    - packages
