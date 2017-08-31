@@ -66,6 +66,7 @@ brew_base_packages:
   - name: s3cmd
   - name: snappy
   - name: sqlite
+  - name: swiftlint
   - name: terraform
   - name: the_silver_searcher
   - name: tree
@@ -108,7 +109,6 @@ brew_cask_applications:
   - name: sequel-pro
   - name: spotify
   - name: sublime-text
-  - name: swiftlint
   - name: the-unarchiver
   - name: time-out
   - name: torbrowser
