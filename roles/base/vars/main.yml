@@ -16,6 +16,7 @@ brew_base_packages:
   - name: cscope
   - name: ctags
   - name: curl
+  - name: exercism
   - name: findutils
   - name: fontconfig
   - name: freetype
