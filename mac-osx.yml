@@ -12,6 +12,7 @@
     - erlang
     - elixir
     - golang
+    - rust
     - nodejs
     - python
     - docker

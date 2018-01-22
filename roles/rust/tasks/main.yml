@@ -1,0 +1,17 @@
+---
+
+- name: Install rust homebrew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ rust_brew_packages }}"
+  tags:
+    - rust
+    - brew
+
+- name: Run rustup-init
+  command: "{{ rust_init_cmd }}"
+  ignore_errors: True
+  tags:
+    - rust
