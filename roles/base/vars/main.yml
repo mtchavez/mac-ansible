@@ -34,7 +34,6 @@ brew_base_packages:
   - name: graphviz
   - name: hadolint
   - name: heroku-toolbelt
-  - name: htop
   - name: hub
   - name: jq
   - name: kubectl
