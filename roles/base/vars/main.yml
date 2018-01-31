@@ -103,7 +103,6 @@ brew_cask_applications:
   - name: macid
   - name: minikube
     install_options: "--force"
-  - name: screenhero
   - name: sequel-pro
   - name: spotify
   - name: sublime-text
