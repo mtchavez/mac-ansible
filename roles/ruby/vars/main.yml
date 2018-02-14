@@ -5,11 +5,12 @@ ruby_brew_packages:
   - name: rbenv-bundler
   - name: rbenv-default-gems
   - name: ruby-build
-ruby_global: "2.4.2"
+ruby_global: "2.5.0"
 ruby_global_file: "{{ home_dir + '/.rbenv/version' }}"
 ruby_rbenv_default_gems_file: "{{ home_dir + '/.rbenv/default-gems' }}"
 ruby_versions:
   - "{{ ruby_global }}"
+  - "2.4.2"
   - "2.3.3"
 ruby_default_gems:
   - bundler
