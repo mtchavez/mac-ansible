@@ -2,9 +2,9 @@
 
 python_brew_packages:
   - name: python
-  - name: python3
 python_packages:
   - pip
+  - pipenv
   - virtualenv
   - virtualenvwrapper
   - boto

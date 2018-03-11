@@ -12,13 +12,14 @@
 
 
 - name: Upgrade pip
-  command: "pip install --upgrade pip"
+  command: "pip3 install --upgrade pip"
   tags:
     - python
 
-- name: Install system python packages
+- name: Install python packages
   pip:
     name: "{{ item }}"
+    executable: pip3
     state: latest
   with_items: "{{ python_packages }}"
   tags:
