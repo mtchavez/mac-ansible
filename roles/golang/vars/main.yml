@@ -38,3 +38,6 @@ golang_default_packages:
   - github.com/sqs/goreturns
   - github.com/zmb3/gogetdoc
   - github.com/derekparker/delve/cmd/dlv
+
+  # AWS dependencies
+  - github.com/fujiwara/kinesis-tailf/cmd/kinesis-tailf
