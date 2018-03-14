@@ -27,7 +27,6 @@ brew_base_packages:
   - name: git-extras
   - name: git-lfs
   - name: git-secrets
-  - name: go-app-engine-64
   - name: goenv
   - name: gnu-sed
   - name: gnu-tar
@@ -86,6 +85,7 @@ brew_cask_applications:
   - name: firefox
   - name: flux
   - name: google-chrome
+  - name: google-cloud-sdk
   - name: google-hangouts
   - name: gpgtools
   - name: harvest
