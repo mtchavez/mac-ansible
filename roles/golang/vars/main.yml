@@ -41,3 +41,4 @@ golang_default_packages:
 
   # AWS dependencies
   - github.com/fujiwara/kinesis-tailf/cmd/kinesis-tailf
+  - github.com/mtchavez/aws-mfa-sts
