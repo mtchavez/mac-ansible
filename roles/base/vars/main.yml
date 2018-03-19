@@ -18,6 +18,7 @@ brew_base_packages:
   - name: curl
   - name: exercism
   - name: findutils
+  - name: fn
   - name: fontconfig
   - name: freetype
   - name: fswatch
