@@ -5,6 +5,7 @@
   gather_facts: false
   roles:
     - base
+    - shell
     - tmux
     - dotfiles
     - vimfiles

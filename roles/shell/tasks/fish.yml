@@ -1,0 +1,32 @@
+---
+- name: Add fish to shells
+  lineinfile:
+    path: "{{ shell_system_shells_path }}"
+    line: "{{ shell_fish_path }}"
+  tags:
+    - shell
+    - fish
+
+- name: Ensure fish functions dir
+  file:
+    path: "{{ shell_fish_functions_dir }}"
+    state: directory
+    mode: 0755
+  tags:
+    - shell
+    - fish
+
+- name: Install fisherman
+  get_url:
+    url: "{{ shell_fisherman_url }}"
+    dest: "{{ shell_fisherman_fish_config }}"
+  tags:
+    - shell
+    - fish
+
+- name: Install fisherman packages
+  command: "{{ shell_fish_path }} -c fisher install {{ shell_fisherman_packages | join(' ')}}"
+  tags:
+    - shell
+    - fish
+    - packages

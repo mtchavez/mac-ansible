@@ -1,0 +1,21 @@
+---
+
+shell_use_fish: true
+shell_brew_packages:
+  - name: fish
+shell_fish_path: /usr/local/bin/fish
+shell_system_shells_path: /etc/shells
+shell_fish_functions_dir: "{{ home_dir}}/.config/fish/functions"
+shell_fisherman_url: "https://git.io/fisher"
+shell_fisherman_fish_config: "{{ shell_fish_functions_dir}}/fisher.fish"
+shell_fisherman_packages:
+  - omf/osx
+  - omf/aws
+  - fzf
+  - edc/bass
+  - omf/foreign-env
+  - omf/theme-bobthefish
+  - omf/theme-scorphish
+  - nvm
+  - pipenv
+  - rbenv

@@ -1,0 +1,14 @@
+---
+
+- name: Install base homebrew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ brew_base_packages }}"
+  tags:
+    - brew
+    - shell
+
+- include: fish.yml
+  when: shell_use_fish
