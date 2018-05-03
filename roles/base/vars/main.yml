@@ -22,6 +22,7 @@ brew_base_packages:
   - name: fontconfig
   - name: freetype
   - name: fswatch
+  - name: fzf
   - name: gettext
   - name: git
     install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
