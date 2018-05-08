@@ -5,7 +5,7 @@
     name: "{{ item.name }}"
     install_options: "{{ item.install_options | default('') }}"
     state: latest
-  with_items: "{{ brew_base_packages }}"
+  with_items: "{{ shell_brew_packages }}"
   tags:
     - brew
     - shell
