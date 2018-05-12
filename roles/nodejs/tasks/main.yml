@@ -14,3 +14,20 @@
   tags:
     - nodejs
     - nvm
+
+- name: Make yarn dir
+  file:
+    path: "{{ home_dir }}/.yarn"
+    state: directory
+  tags:
+    - nodejs
+    - yarn
+
+- name: NPM config
+  template:
+    src: npmrc.j2
+    dest: "{{ home_dir }}/.npmrc"
+    mode: 0755
+  tags:
+    - nodejs
+    - npm
