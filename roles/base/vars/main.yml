@@ -62,6 +62,7 @@ brew_base_packages:
   - name: python
   - name: readline
   - name: redis
+  - name: ripgrep
   - name: s3cmd
   - name: snappy
   - name: sqlite
