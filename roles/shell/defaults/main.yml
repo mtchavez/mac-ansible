@@ -14,7 +14,6 @@ shell_fisherman_packages:
   - fzf
   - edc/bass
   - omf/foreign-env
-  - omf/theme-bobthefish
   - omf/theme-scorphish
   - nvm
   - pipenv

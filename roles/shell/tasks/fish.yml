@@ -25,7 +25,9 @@
     - fish
 
 - name: Install fisherman packages
-  command: "{{ shell_fish_path }} -c fisher install {{ shell_fisherman_packages | join(' ')}}"
+  shell: "fisher install {{ shell_fisherman_packages | join(' ') }}"
+  args:
+    executable: "{{ shell_fish_path }}"
   tags:
     - shell
     - fish
