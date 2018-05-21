@@ -69,6 +69,7 @@ brew_base_packages:
   - name: swiftlint
   - name: terraform
   - name: the_silver_searcher
+  - name: tmate
   - name: tree
   - name: vault
   - name: watchman
