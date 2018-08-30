@@ -121,7 +121,7 @@ brew_cask_applications:
   - name: whatsapp
   - name: youll-never-take-me-alive
 brew_taps:
-  - name: caskroom/versions
+  - name: homebrew/cask-versions
   - name: homebrew/science
 base_asdf_repo: "https://github.com/asdf-vm/asdf.git"
 base_asdf_dir: "{{ home_dir }}/.asdf"
