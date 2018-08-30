@@ -17,4 +17,3 @@ shell_fisherman_packages:
   - omf/theme-scorphish
   - nvm
   - pipenv
-  - rbenv
