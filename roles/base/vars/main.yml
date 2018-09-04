@@ -26,6 +26,7 @@ brew_base_packages:
   - name: gettext
   - name: git
     install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
+  - name: git-duet
   - name: git-extras
   - name: git-lfs
   - name: git-secrets
@@ -121,6 +122,7 @@ brew_cask_applications:
   - name: whatsapp
   - name: youll-never-take-me-alive
 brew_taps:
+  - name: git-duet/tap
   - name: homebrew/cask-versions
   - name: homebrew/science
 base_asdf_repo: "https://github.com/asdf-vm/asdf.git"

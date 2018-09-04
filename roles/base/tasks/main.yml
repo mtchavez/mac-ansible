@@ -8,6 +8,16 @@
     - brew-cask
     - update
 
+- name: Install brew taps
+  homebrew_tap:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ brew_taps }}"
+  tags:
+    - base
+    - brew
+    - brew-tap
+
 - name: Install base homebrew packages
   homebrew:
     name: "{{ item.name }}"
@@ -31,16 +41,6 @@
     - base
     - brew
     - brew-cask
-
-- name: Install brew taps
-  homebrew_tap:
-    name: "{{ item.name }}"
-    state: "{{ item.state | default('present') }}"
-  with_items: "{{ brew_taps }}"
-  tags:
-    - base
-    - brew
-    - brew-tap
 
 - name: Cleanup homebrew
   command: "brew cleanup -s"
