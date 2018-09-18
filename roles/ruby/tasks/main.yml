@@ -1,46 +1,43 @@
 ---
 
-- name: Install rbenv via homebrew
-  homebrew:
-    name: "{{ item.name }}"
-    state: latest
-  with_items: "{{ ruby_brew_packages }}"
+- name: Check for ruby plugin
+  command: "asdf plugin-list"
+  register: asdf_plugins
   tags:
-    - brew
     - ruby
-    - rbenv
+    - asdf-plugin
+
+- name: Add asdf ruby plugin
+  command: "asdf plugin-add ruby"
+  when: "'ruby' not in asdf_plugins.stdout"
+  tags:
+    - ruby
+    - asdf-plugin
 
 - name: Write default-gem file
   template:
     src: default-gems.j2
-    dest: "{{ ruby_rbenv_default_gems_file }}"
+    dest: "{{ ruby_default_gems_file }}"
   tags:
     - ruby
-    - rbenv
+    - asdf-plugin
+    - dependencies
+    - gems
 
 - name: Install ruby versions
-  command: "rbenv install {{ item }}"
+  command: "asdf install ruby {{ item }}"
   args:
-    creates: "{{ home_dir }}/.rbenv/versions/{{ item }}"
+    creates: "{{ home_dir }}/.asdf/installs/ruby/{{ item }}"
   with_items: "{{ ruby_versions }}"
   tags:
     - ruby
-    - rbenv
-
-- name: Check ruby global file exists
-  stat:
-    path: "{{ ruby_global_file }}"
-  register: ruby_global_exists
-  tags:
-    - ruby
-    - rbenv
+    - asdf-plugin
 
 - name: Set global ruby version
-  command: "rbenv global {{ ruby_global }}"
-  when: not ruby_global_exists.stat.exists or lookup('file', ruby_global_file) != ruby_global
+  command: "asdf global ruby {{ ruby_global_version }}"
   tags:
     - ruby
-    - rbenv
+    - asdf-plugin
 
 - name: Install ruby gems
   gem:

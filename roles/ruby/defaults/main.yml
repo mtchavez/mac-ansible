@@ -1,0 +1,13 @@
+---
+
+ruby_global_version: "2.5.1"
+ruby_default_gems_file: "{{ home_dir + '/.default-gems' }}"
+ruby_versions:
+  - "{{ ruby_global_version }}"
+  - "2.4.4"
+ruby_default_gems:
+  - bundler
+  - bundler-audit
+  - rake
+  - reek
+  - rubocop
