@@ -1,11 +1,30 @@
 ---
 
-- name: Install brew packages
-  homebrew:
-    name: "{{ item.name }}"
-    install_options: "{{ item.install_options | default('') }}"
-    state: latest
-  with_items: "{{ elixir_brew_packages }}"
+- name: Check for elixir plugin
+  command: "asdf plugin-list"
+  register: asdf_plugins
   tags:
     - elixir
-    - brew
+    - asdf-plugin
+
+- name: Add asdf elixir plugin
+  command: "asdf plugin-add elixir"
+  when: "'elixir' not in asdf_plugins.stdout"
+  tags:
+    - elixir
+    - asdf-plugin
+
+- name: Install elixir versions
+  command: "asdf install elixir {{ item }}"
+  args:
+    creates: "{{ home_dir }}/.asdf/installs/elixir/{{ item }}"
+  with_items: "{{ elixir_versions }}"
+  tags:
+    - elixir
+    - asdf-plugin
+
+- name: Set global elixir version
+  command: "asdf global elixir {{ elixir_global_version }}"
+  tags:
+    - elixir
+    - asdf-plugin

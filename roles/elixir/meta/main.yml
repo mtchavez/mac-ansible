@@ -1,3 +1,5 @@
 ---
-# elixir meta
+
+dependencies:
+  - { role: asdf, tags: ["asdf", "asdf-plugin", "elixir"] }
 

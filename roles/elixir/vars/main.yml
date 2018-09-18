@@ -1,5 +1,2 @@
 ---
-
-elixir_brew_packages:
-  - name: elixir
-  - name: mix-completion
+# elixir vars
