@@ -8,3 +8,11 @@
   tags:
     - asdf
     - packages
+
+- name: Add global asdf config
+  template:
+    src: asdfrc.j2
+    dest: "{{ asdf_global_config }}"
+  tags:
+    - asdf
+    - packages

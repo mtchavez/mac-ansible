@@ -3,3 +3,4 @@
 asdf_repo: "https://github.com/asdf-vm/asdf.git"
 asdf_dir: "{{ home_dir }}/.asdf"
 asdf_ver: "v0.5.1"
+asdf_global_config: "{{ home_dir }}/.asdfrc"
