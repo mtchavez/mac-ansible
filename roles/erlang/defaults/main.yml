@@ -1,3 +1,5 @@
 ---
-# erlang defaults
 
+erlang_global_version: 20.3.6
+erlang_versions:
+  - "{{ erlang_global_version }}"

@@ -1,3 +1,5 @@
 ---
-# erlang meta
+
+dependencies:
+  - { role: asdf, tags: ["asdf", "asdf-plugin", "erlang"] }
 
