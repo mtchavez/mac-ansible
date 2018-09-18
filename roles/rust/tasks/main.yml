@@ -1,14 +1,33 @@
 ---
 
-- name: Install rust homebrew packages
-  homebrew:
-    name: "{{ item.name }}"
-    install_options: "{{ item.install_options | default('') }}"
-    state: latest
-  with_items: "{{ rust_brew_packages }}"
+- name: Check for rust plugin
+  command: "asdf plugin-list"
+  register: asdf_plugins
   tags:
     - rust
-    - brew
+    - asdf-plugin
+
+- name: Add asdf rust plugin
+  command: "asdf plugin-add rust"
+  when: "'rust' not in asdf_plugins.stdout"
+  tags:
+    - rust
+    - asdf-plugin
+
+- name: Install rust versions
+  command: "asdf install rust {{ item }}"
+  args:
+    creates: "{{ home_dir }}/.asdf/installs/rust/{{ item }}"
+  with_items: "{{ rust_versions }}"
+  tags:
+    - rust
+    - asdf-plugin
+
+- name: Set global rust version
+  command: "asdf global rust {{ rust_global_version }}"
+  tags:
+    - rust
+    - asdf-plugin
 
 - name: Run rustup-init
   command: "{{ rust_init_cmd }}"

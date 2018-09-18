@@ -1,6 +1,2 @@
 ---
-
-rust_brew_packages:
-  - name: rustup
-rust_init_cmd: "rustup-init -y --no-modify-path"
-
+# rust vars

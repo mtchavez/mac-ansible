@@ -1,3 +1,7 @@
 ---
-# rust defaults
+
+rust_global_version: 1.29.0
+rust_versions:
+  - "{{ rust_global_version }}"
+rust_init_cmd: "rustup-init -y --no-modify-path"
 

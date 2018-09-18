@@ -84,6 +84,7 @@ brew_cask_applications:
   - name: google-chrome
   - name: google-cloud-sdk
   - name: google-hangouts
+  # TODO: Requires password, become sudo
   - name: gpg-suite
   - name: harvest
   - name: imagealpha
