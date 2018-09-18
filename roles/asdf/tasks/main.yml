@@ -1,0 +1,10 @@
+---
+
+- name: Install ASDF version manager
+  git:
+    repo: "{{ asdf_repo }}"
+    dest: "{{ asdf_dir }}"
+    version: "{{ asdf_ver }}"
+  tags:
+    - asdf
+    - packages

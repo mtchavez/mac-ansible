@@ -125,6 +125,3 @@ brew_taps:
   - name: git-duet/tap
   - name: homebrew/cask-versions
   - name: homebrew/science
-base_asdf_repo: "https://github.com/asdf-vm/asdf.git"
-base_asdf_dir: "{{ home_dir }}/.asdf"
-base_asdf_ver: "v0.4.3"

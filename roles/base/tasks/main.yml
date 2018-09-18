@@ -79,13 +79,3 @@
     state: directory
   tags:
     - base
-
-- name: asdf version manager
-  git:
-    repo: "{{ base_asdf_repo }}"
-    dest: "{{ base_asdf_dir }}"
-    version: "{{ base_asdf_ver }}"
-  tags:
-    - base
-    - packages
-    - asdf
