@@ -19,7 +19,7 @@ then
     sudo easy_install pip
 fi
 
-sudo pip install --upgrade -r requirements.txt
+pip install --user --upgrade -r requirements.txt
 
 if [ ! `which brew` ]
 then
