@@ -28,9 +28,3 @@
   tags:
     - rust
     - asdf-plugin
-
-- name: Run rustup-init
-  command: "{{ rust_init_cmd }}"
-  ignore_errors: True
-  tags:
-    - rust
