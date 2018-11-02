@@ -8,6 +8,7 @@ brew_base_packages:
   - name: automake
   - name: bash
   - name: bash-completion
+  - name: bat
   - name: bazaar
   - name: certbot
   - name: cmatrix
