@@ -36,7 +36,7 @@ brew_base_packages:
   - name: gnu-tar
   - name: graphviz
   - name: hadolint
-  - name: heroku-toolbelt
+  - name: heroku
   - name: hub
   - name: jq
   - name: kubectl
