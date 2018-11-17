@@ -50,15 +50,6 @@
     - brew
     - cleanup
 
-- name: Cleanup cask
-  command: "brew cask cleanup"
-  ignore_errors: True
-  tags:
-    - base
-    - brew
-    - brew-cask
-    - cleanup
-
 - name: ssh dir
   file:
     path: "{{ home_dir }}/.ssh"
