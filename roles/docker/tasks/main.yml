@@ -18,12 +18,3 @@
   tags:
     - brew
     - docker
-
-- name: Remove old docker install script
-  file:
-    src: setup-docker.j2
-    dest: "{{ home_dir }}/bin/setup-docker"
-    mode: 0755
-    state: absent
-  tags:
-    - docker
