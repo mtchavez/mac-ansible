@@ -26,7 +26,6 @@ brew_base_packages:
   - name: fzf
   - name: gettext
   - name: git
-    install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
   - name: git-duet
   - name: git-extras
   - name: git-lfs
