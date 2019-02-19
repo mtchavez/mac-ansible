@@ -26,7 +26,7 @@
   homebrew:
     name: macvim
     install_options: "{{ macvim_install_options }}"
-    state: latest
+    state: present
   tags:
     - vimfiles
     - brew
