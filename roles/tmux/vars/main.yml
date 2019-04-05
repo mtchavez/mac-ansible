@@ -2,7 +2,6 @@
 
 tmux_brew_packages:
   - name: tmux
-    install_options: "with-utf8proc"
   - name: "reattach-to-user-namespace"
 tmux_tpm_repo: "https://github.com/tmux-plugins/tpm.git"
 tmux_tpm_dir: "{{ home_dir }}/.tmux/plugins/tpm"
