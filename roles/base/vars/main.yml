@@ -110,3 +110,4 @@ brew_cask_applications:
 brew_taps:
   - name: git-duet/tap
   - name: homebrew/cask-versions
+  - name: heroku/brew
