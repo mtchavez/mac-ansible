@@ -10,7 +10,11 @@
     - golang
 
 - name: Go path dirs
-  command: "mkdir -p {{ gopath_dir}}/{{ item }}"
+  file:
+    path: "{{ gopath_dir }}/{{ item }}"
+    owner: "{{ username }}"
+    group: "{{ staff_group }}"
+    state: directory
   with_items:
     - src
     - pkg

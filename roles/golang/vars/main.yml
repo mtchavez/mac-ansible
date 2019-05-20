@@ -11,12 +11,10 @@ golang_default_packages:
   - golang.org/x/tools/cmd/guru
 
   # Common packages
-  - github.com/golang/dep/cmd/dep
+  - github.com/derekparker/delve/cmd/dlv
   - github.com/golang/lint/golint
-  - github.com/tools/godep
   - github.com/mitchellh/gox
   - github.com/smartystreets/goconvey
-  - github.com/spf13/hugo
   - github.com/pengwynn/flint
   - github.com/fatih/hclfmt
   - github.com/rakyll/hey
@@ -24,6 +22,8 @@ golang_default_packages:
   - github.com/mvdan/unparam
   - github.com/davecheney/httpstat
   - github.com/stretchr/testify
+  - github.com/sqs/goreturns
+  - github.com/zmb3/gogetdoc
 
   # vim-go dependencies
   - github.com/nsf/gocode
@@ -33,11 +33,6 @@ golang_default_packages:
   - github.com/jstemmer/gotags
   - github.com/klauspost/asmfmt/cmd/asmfmt
   - github.com/fatih/motion
-
-  # Atom go dependencies
-  - github.com/sqs/goreturns
-  - github.com/zmb3/gogetdoc
-  - github.com/derekparker/delve/cmd/dlv
 
   # AWS dependencies
   - github.com/fujiwara/kinesis-tailf/cmd/kinesis-tailf
