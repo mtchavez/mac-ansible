@@ -13,18 +13,24 @@ function display() {
     echo "----> $1"
 }
 
-if [ ! `which pip` ]
-then
+if [ ! `which brew` ]; then
+    display "Installing Homebrew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+PATH=/usr/local/bin:$PATH
+brew_prefix=`/usr/local/bin/brew --prefix`
+if [ ! `which python3 | grep -E "^${brew_prefix}"` ]; then
+  brew install python@3
+fi
+
+PATH=/usr/local/opt/python/libexec/bin:$PATH
+if [ ! `which pip` ]; then
     display "Installing pip"
-    sudo easy_install pip
+    easy_install pip
 fi
 
 pip install --user --upgrade -r requirements.txt
 
-if [ ! `which brew` ]
-then
-    display "Installing Homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
 
 # vim: ft=sh:
