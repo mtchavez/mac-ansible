@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+#
+#
+
+PATH=/usr/local/bin:$PATH
+version=`python3 --version | awk '{ print $2 }'`
+major=`echo $version | cut -d. -f1`
+minor=`echo $version | cut -d. -f2`
+PATH=/usr/local/opt/python/libexec/bin:$PATH
+PATH=$HOME/Library/Python/${major}.${minor}/bin/:$PATH
+time ansible-playbook --diff $@
+
+# vim: ft=sh:

@@ -2,16 +2,11 @@ all_dirs = $(shell echo "roles/$(role)/{defaults,files,handlers,library,meta,tas
 main_dirs = $(shell echo "roles/$(role)/{defaults,handlers,meta,tasks,vars}")
 PLAYBOOK_ARGS?="--diff"
 
-all: bootstrap provision
+all: bootstrap
 
 bootstrap:
 	@echo "-----> Running setup script"
 	@sh ./script/bootstrap
-
-provision:
-	@echo "-----> Running ansible playbook to provision system..."
-	@HOMEBREW_CASK_OPTS="--appdir=/Applications" \
-		time ansible-playbook mac-osx.yml $(PLAYBOOK_ARGS)
 
 role:
 	@if [ "$($@)" = "" ]; then echo "Role is not defined. Pass role=rolename"; exit 1; fi
@@ -21,4 +16,4 @@ role:
 		echo "---\n# $(role) $$dirname\n" > ./roles/$(role)/$$dirname/main.yml ;\
 	done
 
-.PHONY: all, role, bootstrap, provision
+.PHONY: all, role, bootstrap
