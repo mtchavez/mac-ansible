@@ -1,27 +1,49 @@
 ---
 
-- name: Nvm setup script
-  template:
-    src: nvm-setup.j2
-    dest: "{{ home_dir }}/bin/setup-nvm"
-    mode: 0755
+- name: Install brew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ nodejs_brew_packages }}"
   tags:
     - nodejs
-    - nvm
+    - brew
 
-- name: Run nvm setup script
-  command: "{{ home_dir }}/bin/setup-nvm"
+- name: Check for nodejs plugin
+  command: "asdf plugin-list"
+  register: asdf_plugins
   tags:
     - nodejs
-    - nvm
+    - asdf-plugin
 
-- name: Make yarn dir
-  file:
-    path: "{{ home_dir }}/.yarn"
-    state: directory
+- name: Add asdf nodejs plugin
+  command: "asdf plugin-add nodejs"
+  when: "'nodejs' not in asdf_plugins.stdout"
   tags:
     - nodejs
-    - yarn
+    - asdf-plugin
+
+- name: Update asdf nodejs plugin
+  command: "asdf plugin-update nodejs"
+  tags:
+    - nodejs
+    - asdf-plugin
+
+- name: Install nodejs versions
+  command: "asdf install nodejs {{ item }}"
+  args:
+    creates: "{{ home_dir }}/.asdf/installs/nodejs/{{ item }}"
+  with_items: "{{ nodejs_versions }}"
+  tags:
+    - nodejs
+    - asdf-plugin
+
+- name: Set global nodejs version
+  command: "asdf global nodejs {{ nodejs_global_version }}"
+  tags:
+    - nodejs
+    - asdf-plugin
 
 - name: NPM config
   template:

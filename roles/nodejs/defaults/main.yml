@@ -1,0 +1,8 @@
+---
+
+nodejs_brew_packages:
+  - name: yarn
+nodejs_global_version: "10.15.3"
+nodejs_versions:
+  - "{{ nodejs_global_version }}"
+
