@@ -11,4 +11,4 @@
     - shell
 
 - include: fish.yml
-  when: shell_use_fish
+  when: shell_use_fish == True
