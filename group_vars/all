@@ -1,6 +1,9 @@
 ---
 
 home_dir: "{{ lookup('env', 'HOME') }}"
+username: "{{ lookup('env', 'USER') }}"
+staff_group: "staff"
+admin_group: "admin"
 workspace_dir: "{{ home_dir }}/Projects"
 documents_dir: "{{ home_dir }}/Documents"
 
