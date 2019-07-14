@@ -95,6 +95,7 @@ brew_cask_applications:
   - name: keybase
   - name: little-snitch
   - name: minikube
+  - name: nordvpn
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver

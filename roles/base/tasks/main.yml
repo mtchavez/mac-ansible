@@ -27,6 +27,7 @@
   tags:
     - base
     - brew
+    - base-brew
 
 - name: Install brew cask applications
   command: "brew cask install {{item.install_options | default('') }} {{ item.name }}"
