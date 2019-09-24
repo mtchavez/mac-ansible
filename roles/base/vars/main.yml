@@ -16,6 +16,7 @@ brew_base_packages:
   - name: cscope
   - name: ctags
   - name: curl
+  - name: direnv
   - name: exercism
   - name: findutils
   - name: fn
