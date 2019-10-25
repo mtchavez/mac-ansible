@@ -9,10 +9,12 @@ shell_fish_functions_dir: "{{ home_dir}}/.config/fish/functions"
 shell_fisherman_url: "https://git.io/fisher"
 shell_fisherman_fish_config: "{{ shell_fish_functions_dir}}/fisher.fish"
 shell_fisherman_packages:
-  - omf/osx
-  - omf/aws
-  - fzf
   - edc/bass
-  - omf/foreign-env
-  - omf/theme-scorphish
+  - fzf
+  - oh-my-fish/foreign-env
+  - oh-my-fish/plugin-aws
+  - oh-my-fish/plugin-direnv
+  - oh-my-fish/plugin-osx
+  - oh-my-fish/plugin-thefuck
+  - oh-my-fish/theme-scorphish
   - pipenv
