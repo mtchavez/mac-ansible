@@ -80,7 +80,6 @@ brew_cask_applications:
   - name: atom
   - name: bartender
   - name: caffeine
-  - name: encryptme
   - name: firefox
   - name: flux
   - name: google-chrome
