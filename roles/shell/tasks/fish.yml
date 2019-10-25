@@ -3,6 +3,7 @@
   lineinfile:
     path: "{{ shell_system_shells_path }}"
     line: "{{ shell_fish_path }}"
+  become: yes
   tags:
     - shell
     - fish
