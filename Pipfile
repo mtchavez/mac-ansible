@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 
-ansible = "*"
+ansible = ">=2.9.4"
 boto = "*"
 pyyaml = "*"
 

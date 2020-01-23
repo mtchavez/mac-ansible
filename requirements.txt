@@ -1,2 +1,10 @@
-ansible==2.6.18
-boto
+-i https://pypi.python.org/simple
+ansible==2.9.4
+boto==2.49.0
+cffi==1.13.2
+cryptography==2.8
+jinja2==2.10.3
+markupsafe==1.1.1
+pycparser==2.19
+pyyaml==5.3
+six==1.14.0
