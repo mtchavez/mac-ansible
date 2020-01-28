@@ -3,7 +3,6 @@
 - name: Install golang via homebrew
   homebrew:
     name: go
-    install_options: "{{ golang_brew_options }}"
     state: present
   tags:
     - brew
