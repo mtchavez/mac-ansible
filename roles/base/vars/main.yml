@@ -103,6 +103,7 @@ brew_cask_applications:
   - name: time-out
   - name: tor-browser
   - name: tunnelblick
+  - name: tuple
   - name: vagrant
   - name: virtualbox
   - name: viscosity
