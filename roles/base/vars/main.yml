@@ -107,6 +107,7 @@ brew_cask_applications:
   - name: vagrant
   - name: virtualbox
   - name: viscosity
+  - name: visual-studio-code
   - name: vmware-fusion
   - name: vlc
   - name: whatsapp
