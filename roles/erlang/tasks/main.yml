@@ -1,5 +1,15 @@
 ---
 
+- name: Install brew packages
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
+    state: latest
+  with_items: "{{ erlang_brew_packages }}"
+  tags:
+    - erlang
+    - brew
+
 - name: Check for erlang plugin
   command: "asdf plugin-list"
   register: asdf_plugins
@@ -15,7 +25,7 @@
     - asdf-plugin
 
 - name: Install erlang versions
-  command: "asdf install erlang {{ item }}"
+  shell: asdf install erlang {{ item }}
   args:
     creates: "{{ home_dir }}/.asdf/installs/erlang/{{ item }}"
   with_items: "{{ erlang_versions }}"

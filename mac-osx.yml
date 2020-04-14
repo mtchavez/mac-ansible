@@ -12,6 +12,10 @@
     - vimfiles
     - ruby
     - erlang
+    - role: erlang
+      environment:
+        KERL_CONFIGURE_OPTION: --without-javac
+        KERL_USE_AUTOCONF: "yes"
     - elixir
     - golang
     - rust

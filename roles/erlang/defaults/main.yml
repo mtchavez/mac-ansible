@@ -1,5 +1,7 @@
 ---
 
-erlang_global_version: 20.3.6
+erlang_global_version: 22.3.2
 erlang_versions:
   - "{{ erlang_global_version }}"
+erlang_brew_packages:
+  - wxmac 
