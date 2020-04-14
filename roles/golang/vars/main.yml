@@ -1,6 +1,6 @@
 ---
 
-gopath_dir: "{{ workspace_dir }}/go"
+gopath_dir: "{{ home_dir }}/go"
 golang_default_packages:
   # Golang tools
   - golang.org/x/tools/cmd/goimports
