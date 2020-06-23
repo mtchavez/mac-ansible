@@ -64,6 +64,7 @@ brew_base_packages:
   - name: s3cmd
   - name: snappy
   - name: sqlite
+  - name: starship
   - name: terraform
   - name: thefuck
   - name: the_silver_searcher
