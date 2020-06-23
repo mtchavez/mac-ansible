@@ -58,6 +58,7 @@ brew_base_packages:
   - name: opam
   - name: packer
   - name: protobuf
+  - name: reattach-to-user-namespace
   - name: readline
   - name: ripgrep
   - name: s3cmd
