@@ -4,4 +4,5 @@ erlang_global_version: 22.3.2
 erlang_versions:
   - "{{ erlang_global_version }}"
 erlang_brew_packages:
-  - kerl
+  - name: kerl
+  - name: wxmac
