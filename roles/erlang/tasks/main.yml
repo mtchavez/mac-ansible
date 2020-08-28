@@ -2,7 +2,7 @@
 
 - name: Install brew packages
   homebrew:
-    name: "{{ item.name }}"
+    name: "{{ item }}"
     install_options: "{{ item.install_options | default('') }}"
     state: latest
   with_items: "{{ erlang_brew_packages }}"

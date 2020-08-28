@@ -5,4 +5,3 @@ erlang_versions:
   - "{{ erlang_global_version }}"
 erlang_brew_packages:
   - kerl
-  - wxmac 
