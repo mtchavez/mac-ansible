@@ -37,6 +37,7 @@ brew_base_packages:
   - name: hadolint
   - name: heroku
   - name: hub
+  - name: inetutils
   - name: jq
   - name: kubectl
   - name: libevent
