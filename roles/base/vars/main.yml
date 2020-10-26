@@ -35,6 +35,7 @@ brew_base_packages:
   - name: gnu-tar
   - name: graphviz
   - name: hadolint
+  - name: hashicorp/tap/waypoint
   - name: heroku
   - name: hub
   - name: inetutils
@@ -114,3 +115,4 @@ brew_taps:
   - name: git-duet/tap
   - name: homebrew/cask-versions
   - name: heroku/brew
+  - name: hashicorp/tap
