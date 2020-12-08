@@ -39,6 +39,7 @@ brew_base_packages:
   - name: heroku
   - name: hub
   - name: inetutils
+  - name: jenv
   - name: jq
   - name: kubectl
   - name: libevent
