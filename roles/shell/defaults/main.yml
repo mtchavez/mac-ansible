@@ -10,11 +10,10 @@ shell_fisherman_url: "https://git.io/fisher"
 shell_fisherman_fish_config: "{{ shell_fish_functions_dir}}/fisher.fish"
 shell_fisherman_packages:
   - edc/bass
+  - jethrokuan/fzf
   - oh-my-fish/foreign-env
   - oh-my-fish/plugin-aws
   - oh-my-fish/plugin-direnv
   - oh-my-fish/plugin-osx
   - oh-my-fish/plugin-thefuck
-  - oh-my-fish/theme-scorphish
   - pipenv
-  - jethrokuan/fzf
