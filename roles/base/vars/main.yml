@@ -1,8 +1,6 @@
 ---
 
 brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
-brew_bin: "/usr/local/bin/brew"
-brew_cask_bin: "/usr/local/bin/brew-cask"
 brew_base_packages:
   - name: autoconf
   - name: automake
@@ -52,7 +50,6 @@ brew_base_packages:
   - name: libyaml
   - name: lorem
   - name: lua
-  - name: luajit
   - name: makedepend
   - name: memcached
   - name: mercurial
@@ -76,7 +73,6 @@ brew_base_packages:
   - name: vault
   - name: watchman
   - name: wget
-  - name: xhyve
   - name: yarn
 brew_cask_applications:
   - name: alfred
@@ -90,7 +86,6 @@ brew_cask_applications:
   - name: google-chrome
   # TODO: Requires password, become sudo
   - name: gpg-suite
-  - name: harvest
   - name: imagealpha
   - name: imageoptim
   - name: istat-menus
@@ -101,12 +96,12 @@ brew_cask_applications:
   - name: spotify
   - name: sublime-text
   - name: the-unarchiver
-  - name: time-out
   - name: tor-browser
   - name: tunnelblick
   - name: tuple
   - name: vagrant
-  - name: virtualbox
+  # NOTE: has needs for Apple silicon
+  # - name: virtualbox
   - name: viscosity
   - name: visual-studio-code
   - name: vmware-fusion

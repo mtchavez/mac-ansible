@@ -1,8 +1,10 @@
 ---
 
 nodejs_brew_packages:
+  - name: node-build
   - name: yarn
-nodejs_global_version: "10.15.3"
+nodejs_global_version: "16.15.0"
 nodejs_versions:
   - "{{ nodejs_global_version }}"
+  - "14.19.3"
 

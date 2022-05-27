@@ -64,6 +64,7 @@
   pip:
     name: neovim
     state: latest
+    executable: pip3
   tags:
     - vimfiles
     - neovim
@@ -73,6 +74,7 @@
   pip:
     name: vim-vint
     state: latest
+    executable: pip3
   tags:
     - vimfiles
     - python

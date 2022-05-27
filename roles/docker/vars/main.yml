@@ -2,5 +2,3 @@
 
 docker_brew_cask_apps:
   - name: docker
-docker_brew_packages:
-  - name: docker-machine-driver-xhyve

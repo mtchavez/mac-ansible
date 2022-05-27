@@ -22,7 +22,7 @@
     - golang
 
 - name: Install golang packages
-  command: "go get -u -v {{ item }}"
+  command: "go install {{ item }}@latest"
   with_items: "{{ golang_default_packages }}"
   ignore_errors: yes
   tags:

@@ -30,10 +30,13 @@
     - base-brew
 
 - name: Install brew cask applications
-  command: "brew cask install {{item.install_options | default('') }} {{ item.name }}"
+  command: "brew install {{item.install_options | default('') }} {{ item.name }}"
   # TODO: Figure out "Error no cask hydra" issue
   # homebrew_cask:
   #   name: "{{ item.name }}"
+  #   state: "{{ item.state | default('present') }}"
+  #   install_options: "{{ item.install_options | default('') }}"
+  # community.general.homebrew_cask:
   #   state: "{{ item.state | default('present') }}"
   #   install_options: "{{ item.install_options | default('') }}"
   with_items: "{{ brew_cask_applications }}"

@@ -4,7 +4,8 @@ home_dir: "{{ lookup('env', 'HOME') }}"
 username: "{{ lookup('env', 'USER') }}"
 staff_group: "staff"
 admin_group: "admin"
-workspace_dir: "{{ home_dir }}/Projects"
+workspace_dir: "{{ home_dir }}/Workspace"
 documents_dir: "{{ home_dir }}/Documents"
+brew_bin: "/opt/homebrew/bin"
 
 # vim: ft=yaml:

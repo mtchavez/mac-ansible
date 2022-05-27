@@ -3,7 +3,6 @@
 python_brew_packages:
   - name: python
 python_packages:
-  - pip
   - pipenv
   - virtualenv
   - virtualenvwrapper

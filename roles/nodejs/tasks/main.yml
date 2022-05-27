@@ -30,14 +30,6 @@
     - nodejs
     - asdf-plugin
 
-- name: Install nodejs keyring
-  shell: ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-  with_items: "{{ nodejs_versions }}"
-  tags:
-    - nodejs
-    - asdf-plugin
-
-
 - name: Install nodejs versions
   command: "asdf install nodejs {{ item }}"
   args:

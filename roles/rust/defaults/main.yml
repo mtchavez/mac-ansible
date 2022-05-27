@@ -1,5 +1,5 @@
 ---
 
-rust_global_version: 1.29.0
+rust_global_version: 1.61.0
 rust_versions:
   - "{{ rust_global_version }}"
