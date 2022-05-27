@@ -19,18 +19,23 @@ if [ ! `which brew` ]; then
 fi
 
 PATH=/usr/local/bin:$PATH
-brew_prefix=`/usr/local/bin/brew --prefix`
+PATH=/opt/homebrew/bin:$PATH
+brew_prefix=`/opt/homebrew/bin/brew --prefix`
 if [ ! `which python3 | grep -E "^${brew_prefix}"` ]; then
+  display "Installing python3 from homebrew"
   brew install python@3
 fi
 
 PATH=/usr/local/opt/python/libexec/bin:$PATH
 if [ ! `which pip` ]; then
     display "Installing pip"
-    easy_install pip
+    python3 -m ensurepip --upgrade --user
+    pip3 install --upgrade pip
 fi
 
-pip install --user --upgrade -r requirements.txt
+PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+brew install pkg-config libffi
+pip3 install --user --upgrade -r requirements.txt
 
 
 # vim: ft=sh:
