@@ -1,7 +1,7 @@
 -i https://pypi.python.org/simple
 ansible==2.9.4
 boto==2.49.0
-cffi==1.13.2
+cffi==1.15.0
 jinja2==2.10.3
 markupsafe==1.1.1
 pycparser==2.19
