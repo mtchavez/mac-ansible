@@ -26,7 +26,7 @@ if [ ! `which python3 | grep -E "^${brew_prefix}"` ]; then
   brew install python@3
 fi
 
-PATH=/usr/local/opt/python/libexec/bin:$PATH
+PATH=/opt/homebrew/opt/python/libexec/bin/:$PATH
 if [ ! `which pip` ]; then
     display "Installing pip"
     python3 -m ensurepip --upgrade --user
