@@ -82,6 +82,7 @@ brew_cask_applications:
   - name: bartender
   - name: caffeine
   - name: firefox
+  - name: firefox-developer-edition
   - name: flux
   - name: google-chrome
   # TODO: Requires password, become sudo
