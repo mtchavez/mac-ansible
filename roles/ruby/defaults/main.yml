@@ -10,5 +10,6 @@ ruby_default_gems:
   - bundler-audit
   - rake
   - reek
+  - ripper-tags
   - rubocop
   - solargraph
